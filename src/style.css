@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to top, #c2e59c, #64b3f4);
+    margin: 0;
+}
+
+.container {
+    
+    width: 59.6rem;
+    height: 40rem;
+    background-image: url("/img/bienvenidafondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    
+   
+}
+
+.welcome {
+    width: 31.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid red;
+    text-align: center;
+    margin-block-start: 380px;
+    margin-inline: 255px;
+}
