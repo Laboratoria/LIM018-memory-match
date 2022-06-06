@@ -26,21 +26,34 @@ for(let i=0; i<itemsPokemon.length ; i++ ){
 //console.log(dobleitems)
 
 
-
+dobleitems.sort(()=> {return Math.random()-0.5})
+console.log(dobleitems)
 
 const createCards = () => {
   const tarjet = document.getElementById("areaCarta")
   dobleitems.forEach(function(item){
-    console.log(item)
-     tarjet.innerHTML += `<div class =" tarjeta" > 
-     <div class="cara posterior"> ${item.id} <img src ='${item.image}' >  </div>
-      <div class="cara superior"></div>
-      </div>`
-      //tarjet.className = 'cara superior';
+    //console.log(item)
+    tarjet.innerHTML += `<div class ="tarjeta" > 
+    <div class="cara posterior"> ${item.id} <img src ='${item.image}' >  </div>
+    <div class="cara superior"></div>
+    </div>`
+    //tarjet.className = 'cara superior';
     //el.textContent = 'Hola mundo!';
   })
-  return itemsPokemon
-  //console.log(itemsPokemon)
+  //return itemsPokemon
+  let selecciones 
+ function seleccionartarjeta (i) {
+    let tarjeta = document.getElementById(`tarjeta ${i}`)
+    if (tarjeta.style.transform != "rotateY(180deg)")
+      tarjeta.style.transform == "rotateY(180deg)"
+      selecciones.push(i)
+      console.log(selecciones)
+  }
+  if (selecciones.length ==2) {
+    deseleccionar(selecciones)
+    selecciones = []
+  }
+  
 }
 
 export default createCards;

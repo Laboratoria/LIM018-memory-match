@@ -1,0 +1,16 @@
+.estadisticas {
+    display: flex;
+    justify-content: center;
+    gap : 15px;
+}
+
+.estadisticas img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid red ;
+}
+.puntaje, .vidas, .tiempo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
