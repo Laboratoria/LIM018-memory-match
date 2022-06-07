@@ -1,14 +1,30 @@
 .estadisticas {
     display: flex;
-    justify-content: center;
-    gap : 15px;
+    justify-content: space-around;
+}
+
+.principales {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.movimientos {
+    font-size: 2rem;
+    
+}
+
+h6 {
+    margin-block: 2rem;
+    font-family: Roboto;
 }
 
 .estadisticas img {
-    width: 80px;
-    height: 80px;
-    border: 1px solid red ;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
 }
+
 .puntaje, .vidas, .tiempo {
     display: flex;
     flex-direction: row;

@@ -1,36 +1,40 @@
 .game{
-    border: 1px solid pink;
+    border: 1px solid black;
     -webkit-perspective: 1000 ;
-    
-    
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .areaCarta {
     display: grid;
-    grid-template-columns: repeat(6, 125px);
+    grid-template-columns: repeat(6,minmax(80px , 100px) );
     grid-template-rows: 125px 125px 125px;
-    grid-gap: 15px;
-    width: 100%;
-    height: 840px;
-    border: 1px solid blue;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    column-gap: 15px;
+    margin-inline: 20px;
 }
 
  .tarjeta, .cara {
-    height: 120px;
-    width: 120px;
+    height: 6rem;
+    width: 6rem;
     min-width: 80px;
     cursor: pointer;
+    border-radius: 0.5rem;
 }
 
-/*.tarjeta:hover{
+.tarjeta:hover{
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     
-}*/
+}
 
 .tarjeta{
     position: relative;
-    border: 1px solid red;
     transform-style: preserve-3d;
     transition: transform 1s;
 }
@@ -38,13 +42,28 @@
 .cara {
     position: absolute;
     backface-visibility: hidden;
+    border: 1px solid black;
 }
 
 .posterior {
     transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    background: rgba(43, 45, 39);
+    align-items: center;
 }
 
 .superior {
-    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5681F0;
 }
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 3rem;
+    }
 

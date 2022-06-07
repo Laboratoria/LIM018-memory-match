@@ -33,15 +33,18 @@ const createCards = () => {
   const tarjet = document.getElementById("areaCarta")
   dobleitems.forEach(function(item){
     //console.log(item)
-    tarjet.innerHTML += `<div class ="tarjeta" > 
-    <div class="cara posterior"> ${item.id} <img src ='${item.image}' >  </div>
-    <div class="cara superior"></div>
+    tarjet.innerHTML += `<div class ="tarjeta"  pokemonid= "${item.id}"> 
+    <div class="cara posterior"> <img src ='${item.image}' width ="80px" heigth="80px" >  </div>
+    <div class="cara superior">
+    <img src="/img/signo-de-interrogacion.png" width = "80px" heigth="80px">
+    </div>
     </div>`
     //tarjet.className = 'cara superior';
     //el.textContent = 'Hola mundo!';
   })
-  //return itemsPokemon
-  let selecciones 
+  return itemsPokemon
+
+  /*let selecciones 
  function seleccionartarjeta (i) {
     let tarjeta = document.getElementById(`tarjeta ${i}`)
     if (tarjeta.style.transform != "rotateY(180deg)")
@@ -52,7 +55,7 @@ const createCards = () => {
   if (selecciones.length ==2) {
     deseleccionar(selecciones)
     selecciones = []
-  }
+  }*/
   
 }
 
