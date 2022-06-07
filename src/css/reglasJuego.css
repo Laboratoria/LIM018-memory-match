@@ -1,0 +1,67 @@
+.secondPage {
+    display: flex;
+    justify-content: center;
+    
+}
+ .rules {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 100px;
+ }
+
+.images {
+    flex-direction: column;
+}
+
+.libro img {
+    width: 120px;
+    height: 140px;
+}
+.cuaderno img {
+    width: 120px;
+    height: 140px;
+}
+.niña img {
+    width: 389px;
+    height: 440px;
+}
+
+.player {
+    color: rgba(199, 226, 192, 1);
+    text-shadow: 0px 4px 4px rgba(0, 115, 173, 1);
+    font-size: 96px;
+    width: 40.6rem;
+    height: 10rem;
+     
+}
+
+.reglasJuego {
+    background-color: rgba(255, 255, 255, 0.39);
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+ol h3 {
+    font-family: 'Luckiest Guy', cursive;
+    color: rgba(224, 130, 19, 1);
+    text-align: center;
+    font-size: 48px;
+    width: 419px;
+    height: 54px;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 25px;
+}
+
+.rule1 {
+    color: rgba(15, 126, 39, 1);
+}
+.rule2 {
+    color: rgba(167, 63, 192, 1);
+}
