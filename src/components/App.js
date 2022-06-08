@@ -26,29 +26,62 @@ for(let i=0; i<itemsPokemon.length ; i++ ){
 //console.log(dobleitems)
 
 
-dobleitems.sort(()=> {return Math.random()-0.5})
-console.log(dobleitems)
+function shuffle (dobleitems){    // Función para barajar cartas y desordenarlas
+  return dobleitems.sort(()=>{
+    return Math.random()-0.5})  //utilizamos sort para desordenar los 18 items mediante el método math.random
+}
+
 
 const createCards = () => {
   const tarjet = document.getElementById("areaCarta")
-  dobleitems.forEach(function(item){
+  shuffle(dobleitems).forEach(function(item){
     //console.log(item)
-    tarjet.innerHTML += `<div class ="tarjeta"  pokemonid= "${item.id}"> 
-    <div class="cara posterior"> <img src ='${item.image}' width ="80px" heigth="80px" >  </div>
+    tarjet.innerHTML += `<div class="tarjeta"  data-pokemonid="${item.id}"> 
+    <div class="cara posterior" id="posterior"> <img src ='${item.image}' width ="80px" heigth="80px" >  </div>
     <div class="cara superior">
     <img src="/img/signo-de-interrogacion.png" width = "80px" heigth="80px">
     </div>
     </div>`
-    //tarjet.className = 'cara superior';
-    //el.textContent = 'Hola mundo!';
   })
-  return itemsPokemon
+  const tarjetas = document.querySelectorAll(".tarjeta");
+  let selecciones =[]
+  //console.log(tarjetas)
+  for(let i=0; i<tarjetas.length ; i++ ){
+    tarjetas[i].addEventListener("click", (e) =>{
+      tarjetas[i].style.transform = "rotateY(180deg)";
+      selecciones.push(tarjetas[i])
+      //console.log(e.currentTarget.dataset.pokemonid)
+      console.log(selecciones)
+
+      if (selecciones.length == 2){
+       
+        selecciones = []
+        console.log(selecciones)
+      }
+    })
+    
+   /* function deseleccionar(selecciones) {
+      setTimeout(()=> {
+        let posterior1= document.getElementById("posterior" + selecciones[0]);
+        let posterior2= document.getElementById("posterior" + selecciones[1]);
+        if (posterior1 != posterior2){
+          let tarjeta1= document.querySelector(".tarjeta" + selecciones[0]);
+          let tarjeta2= document.querySelector(".tarjeta" + selecciones[1]);
+          tarjeta1.style.transform="rotateY(0deg)";
+          tarjeta2.style.transform="rotateY(0deg)";
+        }
+      },1000)
+    }*/
+   
+   
+  }
+    
+    
+  
 
   /*let selecciones 
  function seleccionartarjeta (i) {
     let tarjeta = document.getElementById(`tarjeta ${i}`)
-    if (tarjeta.style.transform != "rotateY(180deg)")
-      tarjeta.style.transform == "rotateY(180deg)"
       selecciones.push(i)
       console.log(selecciones)
   }
@@ -56,6 +89,9 @@ const createCards = () => {
     deseleccionar(selecciones)
     selecciones = []
   }*/
+
+
+  
   
 }
 

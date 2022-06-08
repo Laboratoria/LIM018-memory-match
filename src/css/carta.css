@@ -27,12 +27,12 @@
     border-radius: 0.5rem;
 }
 
-.tarjeta:hover{
+/*.tarjeta:hover{
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     
 }
-
+*/
 .tarjeta{
     position: relative;
     transform-style: preserve-3d;

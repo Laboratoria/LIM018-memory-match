@@ -10,102 +10,88 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <section class="container">
-      <div class="containerImg">
-        <img src="/LIM018-memory-match/img/BIENVENIDA-FONDO 1.png">
-        <div class="welcome">
-          <h1> APRENDE JUGANDO</h1>
-          <div class="inputName">
-            <input type="text" placeholder=" Nombre del jugador">
-          </div>
-          <div class="buttonName">
-            <button id="button"> ¡Vamos! </button>
+    <section class="firstPage" id = "container">
+      <div class="container">
+        <div class="containerImg">
+          <img src="/img/BIENVENIDA-FONDO 1.png">
+          <div class="welcome">
+            <h1> APRENDE JUGANDO</h1>
+            <div class="inputName">
+              <input type="text" placeholder=" Nombre del jugador">
+            </div>
+            <div class="buttonName">
+              <button id="button"> ¡Vamos! </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="secondPage">
-      <div class="images">
-        <div class="libro">
-          <img src="/LIM018-memory-match/img/libro.png" alt="libro">
-        </div>
-        <div class="niña">
-          <img src="/LIM018-memory-match/img/niña.png" alt="niña">
-        </div>
-        <div class="cuaderno">
-          <img src="/LIM018-memory-match/img/cuadernos.png" alt="cuadernos">
-        </div>
-      </div>  
-      <div class="rules">
-        <h1 class="player">Hola Carlitos</h1>
-        <div class="reglasJuego">
-          <ol><h3>Reglas del juego</h3>
-            <li class="rule1">Puedes escoger dos cartas por turno, si son iguales ganas un punto</li>
-            <li class="rule2">Si son diferentes, intenta de nuevo. 
-              Trata de recordar qué cartas salieron</li>
-            </ol>
+    <section class="disabled" id="second">
+      <div class="secondPage">
+        <div class="images">
+          <div class="libro">
+            <img src="/img/libro.png" alt="libro">
           </div>
-          <div>
-            <button id="button">Jugar</button>
+          <div class="niña">
+            <img src="/img/niña.png" alt="niña">
           </div>
-        </div>
+          <div class="cuaderno">
+            <img src="/img/cuadernos.png" alt="cuadernos">
+          </div>
+        </div>  
+        <div class="rules">
+          <h1 class="player">Hola Carlitos</h1>
+          <div class="reglasJuego">
+            <ol><h3>Reglas del juego</h3>
+              <li class="rule1">Puedes escoger dos cartas por turno, si son iguales ganas un punto</li>
+              <li class="rule2">Si son diferentes, intenta de nuevo. 
+                Trata de recordar qué cartas salieron</li>
+              </ol>
+            </div>
+            <div>
+              <button id="play">Jugar</button>
+            </div>
+          </div>
+      </div>
     </section>
 
-
-    <section class="game"> 
-      wejijofriojrfjiofrfkjlkfkljf
-      <h2 id="userName"></h2>
-      <div class="table" id="table">
+    <section class="disabled" id="game">
+      <div class="game">
         <div class="estadisticas">
-          
+          <div class="principales">
             <div class="puntaje">
-              <img src="/LIM018-memory-match/img/moneda-dolar.png" alt="">
+              <img src="/img/moneda-dolar.png" alt="">
               <p id = "puntos">100</p>
             </div>
             <div class="vidas">
-              <img src="/LIM018-memory-match/img/corazon.png" alt="">
+              <img src="/img/corazon.png" alt="">
               <p id ="vidas">10</p>
             </div>
             <div class="tiempo">
-              <img src="/LIM018-memory-match/img/reloj.png" alt="">
+              <img src="/img/reloj.png" alt="">
               <p id=""> 1:00</p>
             </div>
-            
-    <section class="game"> 
-      <div class="estadisticas">
-        <div class="principales">
-          <div class="puntaje">
-            <img src="/img/moneda-dolar.png" alt="">
-            <p id = "puntos">100</p>
           </div>
-          <div class="vidas">
-            <img src="/img/corazon.png" alt="">
-            <p id ="vidas">10</p>
-          </div>
-          <div class="tiempo">
-            <img src="/img/reloj.png" alt="">
-            <p id=""> 1:00</p>
+          <div class="movimientos">
+            <h6> Movimientos </h6>
+            <p id="movimientos"></p>
           </div>
         </div>
-        <div class="movimientos">
-          <h6> Movimientos </h6>
-          <p id="movimientos"></p>
-        </div>
-      </div>
-      <div class="table" id="table">
-        <div class="areaCarta" id="areaCarta">
-        </div>
-        <div class="resultado">
-          <div class="ganasteIMG">
-            <img src="/img/cohete.png" width="100px">
+        <div class="table" id="table">
+          <div class="areaCarta" id="areaCarta">
           </div>
-          <div class="botones">
-            <button class="barajar" id="barajar"> Barajar </button>
-            <button> Volver </button>
+          <div class="resultado">
+            <div class="ganasteIMG">
+              <img src="/img/cohete.png" width="100px">
+            </div>
+            <div class="botones">
+              <button class="barajar" id="barajar"> Barajar </button>
+              <button id="back"> Volver </button>
+            </div>
           </div>
         </div>
-      </div>
+      </div> 
       
     </section>
     

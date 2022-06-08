@@ -1,3 +1,11 @@
+.enabled {
+    display: block;
+}
+
+.disabled {
+    display: none;
+}
+
 .secondPage {
     display: flex;
     justify-content: center;
