@@ -39,7 +39,7 @@ const createCards = () => {
     tarjet.innerHTML += `<div class="tarjeta"  data-pokemonid="${item.id}"> 
     <div class="cara posterior" id="posterior"> <img src ='${item.image}' width ="80px" heigth="80px" >  </div>
     <div class="cara superior">
-    <img src="/img/signo-de-interrogacion.png" width = "80px" heigth="80px">
+    <img src="./img/signo-de-interrogacion.png" width = "80px" heigth="80px">
     </div>
     </div>`
   })
@@ -52,9 +52,15 @@ const createCards = () => {
       selecciones.push(tarjetas[i])
       //console.log(e.currentTarget.dataset.pokemonid)
       console.log(selecciones)
+      const selectLength= selecciones.length
+      if (selectLength == 2){
+        if (selecciones[0].dataset.pokemonid != selecciones[1].dataset.pokemonid){
+          //setTimeout((selecciones)=> {
+          selecciones[0].style.transform = "rotateY(0deg)";
+          selecciones[1].style.transform = "rotateY(0deg)";
+          //},1000);
+        }
 
-      if (selecciones.length == 2){
-       
         selecciones = []
         console.log(selecciones)
       }
