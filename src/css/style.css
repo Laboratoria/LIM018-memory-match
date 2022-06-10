@@ -8,7 +8,9 @@ body {
     background:linear-gradient(to top, #c2e59c, #64b3f4);
     margin: 0;
 }
-
+.hidd {
+    display: none;
+}
 .container {
     display: flex;
     justify-content: center;
