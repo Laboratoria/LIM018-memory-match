@@ -13,9 +13,14 @@
 //
 
 import data from '../data/pokemon/pokemon.js';
+import  '../components/timer.js';
+
 //console.log(data);
 const itemsPokemon = data.items;
 const dobleitems = []
+const mensaje = document.getElementById("mensaje")
+const puntaje = document.getElementById("puntos")
+const barajar = document.getElementById("barajar")
 
 
 for(let i=0; i<itemsPokemon.length ; i++ ){
@@ -32,11 +37,13 @@ function shuffle (dobleitems){    // Función para barajar cartas y desordenarla
 }
 
 
+
 const createCards = () => {
-  const tarjet = document.getElementById("areaCarta")
+  const areaCarta = document.getElementById("areaCarta")
   shuffle(dobleitems).forEach(function(item){
     //console.log(item)
-    tarjet.innerHTML += `<div class="tarjeta"  data-pokemonid="${item.id}"> 
+    areaCarta.innerHTML +=
+     `<div class="tarjeta"  data-pokemonid="${item.id}"> 
     <div class="cara posterior" id="posterior"> <img src ='${item.image}' width ="80px" heigth="80px" >  </div>
     <div class="cara superior">
     <img src="./img/signo-de-interrogacion.png" width = "80px" heigth="80px">
@@ -44,62 +51,53 @@ const createCards = () => {
     </div>`
   })
   const tarjetas = document.querySelectorAll(".tarjeta");
-  let selecciones =[]
+  let selecciones =[];
+  let score = 0;
   //console.log(tarjetas)
   for(let i=0; i<tarjetas.length ; i++ ){
     tarjetas[i].addEventListener("click", (e) =>{
       tarjetas[i].style.transform = "rotateY(180deg)";
       selecciones.push(tarjetas[i])
       //console.log(e.currentTarget.dataset.pokemonid)
-      console.log(selecciones)
+      //console.log(selecciones)
       const selectLength= selecciones.length
       if (selectLength == 2){
-        if (selecciones[0].dataset.pokemonid != selecciones[1].dataset.pokemonid){
-          //setTimeout((selecciones)=> {
-          selecciones[0].style.transform = "rotateY(0deg)";
-          selecciones[1].style.transform = "rotateY(0deg)";
-          //},1000);
-        }
-
+      deseleccionar(selecciones)
+      winner(selecciones)
         selecciones = []
-        console.log(selecciones)
+        //console.log(selecciones)
       }
-    })
-    
-   /* function deseleccionar(selecciones) {
+
+    function deseleccionar(selecciones) {
       setTimeout(()=> {
-        let posterior1= document.getElementById("posterior" + selecciones[0]);
-        let posterior2= document.getElementById("posterior" + selecciones[1]);
-        if (posterior1 != posterior2){
-          let tarjeta1= document.querySelector(".tarjeta" + selecciones[0]);
-          let tarjeta2= document.querySelector(".tarjeta" + selecciones[1]);
-          tarjeta1.style.transform="rotateY(0deg)";
-          tarjeta2.style.transform="rotateY(0deg)";
+          if (selecciones[0].dataset.pokemonid != selecciones[1].dataset.pokemonid){
+            selecciones[0].style.transform = "rotateY(0deg)";
+            selecciones[1].style.transform = "rotateY(0deg)";
+          }
+        },1100);
+      }
+
+    function winner(selecciones){
+      if (selecciones[0].dataset.pokemonid == selecciones[1].dataset.pokemonid){
+        score +=100
+        puntaje.innerHTML = `${score}`
+        if(score == 900) {
+         const win = document.createElement ("div");
+         win.className = "ganador"
+         win.textContent = "Ganaste"
+         mensaje.appendChild(win);
+
         }
-      },1000)
-    }*/
-   
-   
+      }
+    }
+    })
   }
-    
-    
-  
-
-  /*let selecciones 
- function seleccionartarjeta (i) {
-    let tarjeta = document.getElementById(`tarjeta ${i}`)
-      selecciones.push(i)
-      console.log(selecciones)
-  }
-  if (selecciones.length ==2) {
-    deseleccionar(selecciones)
-    selecciones = []
-  }*/
-
-
-  
-  
+  barajar.addEventListener("click", () => {
+    //tarjetas.style.transform = "rotateY(180deg)";
+    shuffle(dobleitems);
+  })
 }
+export default createCards; shuffle;
 
-export default createCards;
-console.log(createCards())
+
+//console.log(createCards())

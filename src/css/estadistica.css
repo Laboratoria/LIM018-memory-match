@@ -1,6 +1,7 @@
 .estadisticas {
     display: flex;
     justify-content: space-around;
+    
 }
 
 .principales {
@@ -20,13 +21,17 @@ h6 {
 }
 
 .estadisticas img {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 2rem;
 }
 
 .puntaje, .vidas, .tiempo {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.ganador {
+    
 }
