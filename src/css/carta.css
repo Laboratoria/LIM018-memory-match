@@ -1,6 +1,6 @@
 .game{
     border: 1px solid black;
-    -webkit-perspective: 1000 ;
+    -webkit-perspective: 1000;
     perspective: 1000;
 }
 
@@ -32,8 +32,8 @@
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     
-}*/
-
+}
+*/
 .tarjeta{
     position: relative;
     transform-style: preserve-3d;
@@ -58,8 +58,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(86, 129, 240, 1);
-
+    background-color: #5681F0;
 }
 
 .resultado {
@@ -68,4 +67,3 @@
     justify-content: end;
     gap: 3rem;
     }
-

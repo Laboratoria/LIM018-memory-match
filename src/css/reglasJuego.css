@@ -5,12 +5,20 @@
 .disabled {
     display: none;
 }
+.enabled {
+    display: block;
+}
+
+.disabled {
+    display: none;
+}
+
 .secondPage {
     display: flex;
     justify-content: center;
     
 }
-.rules {
+ .rules {
     display: flex;
     flex-direction: column;
     text-align: center;
