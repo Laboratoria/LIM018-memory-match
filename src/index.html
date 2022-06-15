@@ -17,10 +17,10 @@
           <div class="welcome">
             <h1> APRENDE JUGANDO</h1>
             <div class="inputName">
-              <input type="text" placeholder=" Nombre del jugador">
+              <input type="text" placeholder=" Nombre del jugador" id="nombre" value="">
             </div>
             <div class="buttonName">
-              <button id="button"> ¡Vamos! </button>
+              <button type="submit" id="button"> ¡Vamos! </button>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
           </div>
         </div>  
         <div class="rules">
-          <h1 class="player">Hola Carlitos</h1>
+          <h1 class="player" id="player">Hola Carlitos</h1>
           <div class="reglasJuego">
             <ol><h3>Reglas del juego</h3>
               <li class="rule1">Puedes escoger dos cartas por turno, si son iguales ganas un punto</li>
@@ -62,28 +62,26 @@
           <div class="principales">
             <div class="puntaje">
               <img src="./img/moneda-dolar.png" alt="">
-              <p id = "puntos">100</p>
+              <p id = "puntos">0</p>
             </div>
             <div class="vidas">
               <img src="./img/corazon.png" alt="">
-              <p id ="vidas">10</p>
+              <p id ="vidas">15</p>
             </div>
             <div class="tiempo">
               <img src="./img/reloj.png" alt="">
-              <p id=""> 1:00</p>
+              <p id="timer"> 1:00</p>
             </div>
-          </div>
-          <div class="movimientos">
-            <h6> Movimientos </h6>
-            <p id="movimientos"></p>
           </div>
         </div>
         <div class="table" id="table">
           <div class="areaCarta" id="areaCarta">
           </div>
-          <div class="resultado">
-            <div class="ganasteIMG">
-              <img src="./img/cohete.png" width="100px">
+          <div class="resultado" id="resultado">
+            <div class="mensaje" id="mensaje">
+              <div class="imagen">
+                <img src="./img/cohete.png" width="100px">
+              </div>
             </div>
             <div class="botones">
               <button class="barajar" id="barajar"> Barajar </button>

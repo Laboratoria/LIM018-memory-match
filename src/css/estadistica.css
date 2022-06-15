@@ -1,6 +1,7 @@
 .estadisticas {
     display: flex;
     justify-content: space-around;
+    
 }
 
 .principales {
@@ -20,9 +21,9 @@ h6 {
 }
 
 .estadisticas img {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 2rem;
 }
 
 .puntaje, .vidas, .tiempo {
@@ -31,3 +32,9 @@ h6 {
     align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+.ganador {
+    
+}
+>>>>>>> c55b6f23946546b0c7ea86de9bbee6f7649ad60d
