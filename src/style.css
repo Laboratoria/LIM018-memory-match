@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.App {
+    /*background-color: bisque;*/
+}
+
+.estiloCartas {
+    width: 80px;
+    margin: 5px;
+    padding: 10px;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(50, 50, 60);
+    border-radius: 5px;
+    
+}
+
+div.divCartas {
+    display: ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    margin: 50px 450px;
+    padding: 15px;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 8px;
+    background-color: rgb(183, 183, 183);
+
+}
+
+header {
+    height: 80px;
+    /*background-color: aquamarine;*/
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    height: 40px;
+    background-color:#E7C515;
+    width: 430px;
+    border-radius: 10px;
+    margin: 10px;
+    /*margin-left: 450px;*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
