@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.div_end {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    padding: 100px;
+}
+
+.input_name {
+    
+    justify-content: space-around;
+    background-color: cadetblue;
+
+}
+
+.btn_play {
+    
+    justify-content: space-around;
+    background-color: bisque;
+}

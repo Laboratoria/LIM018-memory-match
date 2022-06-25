@@ -15,22 +15,22 @@
 //
 
 const App = () => {
-  const end = document.createElement('div');
-  end.className = 'end'
-  const inputName = document.createElement('input');
-  inputName.className = 'inputName';
-  inputName.placeholder = "Escribe tu nombre";
+  const div_end = document.createElement('div');
+  div_end.className = 'div_end'
+  const input_name = document.createElement('input');
+  input_name.className = 'input_name';
+  input_name.placeholder = "Escribe tu nombre";
   const btn_play = document.createElement('button');
   btn_play.className = 'btn_play';
   const btn_text = document.createTextNode('Jugar')
   btn_play.appendChild(btn_text);
-  end.appendChild(inputName);
-  end.appendChild(btn_play);
+  div_end.appendChild(input_name);
+  div_end.appendChild(btn_play);
  
   /* end.className = 'App';
   end.textContent = 'Soy Jackie!'; */
 
-  return end;
+  return div_end;
   //return `${inputName}` + `${btn_play}`;
 };
 
