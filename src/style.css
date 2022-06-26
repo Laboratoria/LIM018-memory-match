@@ -4,22 +4,22 @@
     padding: 0;
 }
 
-.div_end {
+.div_end  {
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
     background-color: red;
-    padding: 100px;
-}
-
-.input_name {
     
-    justify-content: space-around;
-    background-color: cadetblue;
-
 }
 
-.btn_play {
+/* .div_end .input_name {
+   
+    justify-content: center;
     
-    justify-content: space-around;
-    background-color: bisque;
+
 }
+
+.div_end .btn_play {
+    
+    justify-content: center;
+   
+} */
