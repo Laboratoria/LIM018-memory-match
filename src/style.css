@@ -22,8 +22,7 @@ html {
     width: 53.8rem;
     height: 8rem;
     border-radius: 1rem;
-    
-    
+      
 
 }
 
@@ -37,3 +36,9 @@ html {
     border-radius: 1.5rem;
    
 } 
+
+span {
+    font-family:fantasy;
+    font-style: normal;
+    font-size: 4rem;
+}
