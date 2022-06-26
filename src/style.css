@@ -3,7 +3,10 @@
     margin: 0;
     padding: 0;
 }
-
+/* Para usar medidas Rem: 1 rem equivale a 10px; */
+html {
+    font-size: 62.5%;
+}
 .div_end  {
     display: flex;
     justify-content: space-evenly;
@@ -11,15 +14,26 @@
     
 }
 
-/* .div_end .input_name {
-   
-    justify-content: center;
+.input_name {
+    font-family:fantasy;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    width: 53.8rem;
+    height: 8rem;
+    border-radius: 1rem;
+    
     
 
 }
 
-.div_end .btn_play {
-    
-    justify-content: center;
+.btn_play {
+    font-family:fantasy;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    width: 27.9rem;
+    height: 6.4rem;
+    border-radius: 1.5rem;
    
-} */
+} 
