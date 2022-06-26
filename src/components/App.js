@@ -43,7 +43,7 @@ const App = () => {
       
     } else {
       
-      message.innerText = `Vamos a jugar ${input_name.value}`;
+      message.innerText = `Vamos a jugar ${input_name.value}!!!`;
       //alert(input_name.value);
     }
   })
