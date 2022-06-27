@@ -8,29 +8,32 @@
     /*background-color: bisque;*/
 }
 
-.estiloCartas {
-    width: 75px;
-    margin: 5px;
-    padding: 10px;
-
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(50, 50, 60);
-    border-radius: 5px;
-    
-}
-
 div.divCartas {
-    display: ;
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    
     height: 350px;
+    width: 450px;
     margin: 50px 450px;
     padding: 15px;
     border: 1px solid rgb(121, 121, 121);
     border-radius: 8px;
     background-color: rgb(183, 183, 183);
 
+}
+
+.estiloCartas {
+    width: 70px;
+    margin: 5px;
+    padding: 10px;
+
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(50, 50, 60);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 header {
