@@ -1,26 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    
 }
 
 .App {
     /*background-color: bisque;*/
 }
 
-div.divCartas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    height: 350px;
-    width: 450px;
-    margin: 50px 450px;
-    padding: 15px;
-    border: 1px solid rgb(121, 121, 121);
-    border-radius: 8px;
-    background-color: rgb(183, 183, 183);
+.estiloCartas {
+    width: 75px;
+    margin: 5px;
+    padding: 10px;
 
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(50, 50, 60);
+    border-radius: 5px;
+    
+}
+
+.img p{
+    font-family: 'Yatra One', cursive;
+    font-size: 35px;
+    color: white;
+    text-align:center;
+    position: relative;  
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);  
+}
+
+
+.input{
+    width: 100%;
+    padding: 90px;
+    background-color: #E7C515;
+    text-align: center;   
+}
+
+h2{
+    font-size: large;
+    font-family: 'Yatra One', cursive;
+    right: 30px;
+    
+}
+.name{
+    border-radius: 10px;
+    border-radius: none;
+    width: 20%;
+    height: 45px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 10px;
+    font-family: 'Yatra One', cursive;
+    font-size: 15px;
+}
+
+.boton{
+    background-color: red;
+    width: 150px;
+    height: 45px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Yatra One', cursive;
+    font-size: 18px;
+}
+
+.boton:hover{
+    background-color: rgb(216, 69, 69);
+   
 }
 
 .estiloCartas {
@@ -37,31 +91,157 @@ div.divCartas {
 }
 
 header {
-    height: 80px;
+    position: relative;
+    height: 100%;
     /*background-color: aquamarine;*/
-    text-align: center;
-    padding: 20px;
-    margin: 10px;
-    font-size: 20px;
+    text-align: center;   
 }
 
 main {
+   
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1{
+    font-size:45px;
+    justify-content: center;
+    display: block;
+    font-family: 'Yatra One', cursive;
+    color: red;
+    margin-top: 40px;
+
 }
 
 ul {
-    height: 40px;
-    background-color:#E7C515;
     width: 430px;
+    height: 60px;
+    background-color:#E7C515;
     border-radius: 10px;
-    margin: 10px;
+    margin: 20px;
+    padding: 20px;
     /*margin-left: 450px;*/
-
+    font-family: 'Yatra One', cursive;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
+}
+
+
+/*
+#cardboard{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.memory-card{
+    width: 25%;
+    height: 33%;
+    margin: 5px;
+    position: relative;
+}
+
+.front-face,
+.back-face{
+    width: 100%;
+    height: 100%;
+    background: #675a10;
+    position: absolute;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+.estiloCartas {
+    display: flex;
+    width: 110px;
+    margin: 5px;
+    padding: 5px;
+    
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(50, 50, 60);
+    border-radius: 5px;
+    
+}
+
+ div .divCartas {/* contenedor de cartas*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    height: 30%;
+    /*flex-flow: row wrap;*/
+    justify-content: space-around;
+    align-content: center;
+    gap: 15px;
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 8px;
+    background-color: rgb(183, 183, 183);
+
+    
+}
+
+
+
+
+@media (max-width: 600px) {
+  
+    div .divCartas {
+        flex: 100%;
+    }
+    .img p{
+        width: 10%;
+    }
+    .name{
+        width: 10%;
+        height: 35px;
+        font-size:5px;
+    }
+
+}
+
+@media  (max-width: 375px) {
+  
+    div .divCartas {
+        flex: 50%;
+    }
+    .estiloCartas {
+        display: flex;
+        width: 25%;
+        margin: 2px;
+        padding: 2px;  
+    }
+    .img p{
+        display: flex;
+        width: 10%;
+    }
+    .input{
+        width: 100%;
+        padding: 45px;
+       
+    }
+
+    .name{
+        display: flex;
+        width: 10%;
+        height: 35px;
+        font-size:5px;
+    }
 }

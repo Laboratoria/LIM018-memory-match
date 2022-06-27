@@ -21,13 +21,16 @@ import webdev from '../data/webdev/webdev.js'
 const App = () => {
   const el = document.createElement('div');
 
-  el.className = 'App';
+import webdev from '../data/webdev/webdev.js';
+console.log(webdev.items);
+
+  const App = () => {
+  const el = document.createElement('div');
+    el.className = 'App';
   //el.textContent = 'Hola mundo!';
   //return el;
   const divCartas = document.createElement('div')
 
-  divCartas.className = 'divCartas'
-  el.appendChild(divCartas)
 
   let webdevArray = webdev.items
   let dobleItems = webdevArray.concat(webdevArray)

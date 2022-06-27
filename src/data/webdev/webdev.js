@@ -1,6 +1,7 @@
-export default {
+ export default {
   name: 'Frontend Web Dev',
-  items: [
+  items: 
+  [
     { id: 'js', image: 'https://simpleicons.org/icons/javascript.svg', bgColor: '#F7DF1E' },
     { id: 'git', image: 'https://simpleicons.org/icons/git.svg', bgColor: '#F05032' },
     { id: 'css', image: 'https://simpleicons.org/icons/css3.svg', bgColor: '#1572B6' },

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -11,22 +12,40 @@
     </header>
 
     <main>
+      <div class="img">
+        <p>MEMORY MATCH</p>
+        <img src="imagenes/baraja.jpg" alt="">
+      </div>
+          <div class="input">
+            <input type="text" class="name" id="usuario" placeholder="Write your name here">
+            <button type="submit" class="boton" onclick=click()>Go Play</button>
+          </div>
+   </main>
+
+   <header>
+    <h1>Hello:<p id="usuario"></p></h1>
+  </header>
+    <main>
+  
       <section>
         <ul>
-          <p>Movimientos: 0</p>
-          <p>Puntaje: 0</p>
-          <p>Tiempo: 0</p>
+          <p id = "moves">Moves: 0</p>
+          <p id = "score">Score: 0</p>
+          <p id = "timer">Time: 0</p>
         </ul>
 
       </section>
 
       <section>
         <div id="root"></div>
+        <div id="cardboard"></div>
+        
         <div id="imagenes"></div>
       </section>
     
     </main>
     <footer></footer>
     <script src="main.js" type="module"></script>
+    
   </body>
 </html>
