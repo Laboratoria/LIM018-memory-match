@@ -12,5 +12,5 @@
     { id: 'react', image: 'https://simpleicons.org/icons/react.svg', bgColor: '#61DAFB' },
     { id: 'angular', image: 'https://simpleicons.org/icons/angular.svg', bgColor: '#DD0031' },
     { id: 'vue', image: 'https://simpleicons.org/icons/vuedotjs.svg', bgColor: '#4FC08D' },
- ],
+  ],
 };
