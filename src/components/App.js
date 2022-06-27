@@ -4,22 +4,6 @@
 //
 // import pokemon from '../data/pokemon/pokemon.js';
 // console.log(pokemon);
-
-import webdev from '../data/webdev/webdev.js' // importo la data de webdev
-//console.log(webdev)
-//console.log(webdev.items[0])
-//console.log(webdev.items[0].image)
-
-//----
-let itemss = webdev.items 
-for (let i=0; i<itemss.length; i++) {
-  let imagen = itemss[i].image
-  console.log(imagen)
-    //console.log(items[i])
-}
-//---
-
-//
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
 //
@@ -29,39 +13,102 @@ for (let i=0; i<itemss.length; i++) {
 //   .catch(console.error);
 //
 
-const App = () => {
-  const el = document.createElement('div');
 
-  el.className = 'App';
+import webdev from '../data/webdev/webdev.js';
+console.log(webdev.items);
+
+  const App = () => {
+  const el = document.createElement('div');
+    el.className = 'App';
   //el.textContent = 'Hola mundo!';
 
-  //---
-  const divCartas = document.createElement('div')
-
-  divCartas.className = 'divCartas'
-  el.appendChild(divCartas)
-
-  let items = webdev.items
-  let dobleItems = items.slice()
-  console.log(dobleItems)
-  for (let i=0; i<items.length; i++) {
-    let imagen = items[i].image
-    //console.log(typeof(imagen))
-    let imgCartas = document.createElement('img')
-    imgCartas.className = 'estiloCartas'
-    imgCartas.src = imagen  // accedemos a la url de la etiqueta img
-    divCartas.appendChild(imgCartas)
-  }
-
-  //let imgCartas = document.createElement('img')
-  //imgCartas.src = items[0].image
- // el.appendChild(imgCartas)
+  
 
 
 
+  let webdevArray = webdev.items
+  let dobleItems = webdevArray.concat(webdevArray)
+  let tarjetasDestapadas = 0;
+  let tarjeta1 = null;
+  let tarjeta2 = null; 
+  let primerResultado = null;
+  let segundoResultado = null;
+  let moves = 0;
+  let score = 0;
 
+
+      //crear tablero 
+    const divCartas = document.createElement('div')
+    divCartas.className = 'divCartas'
+    el.appendChild(divCartas)
+    let mostrarMoves = document.getElementById('moves');
+    let mostrarScore = document.getElementById('score');
+
+     // algoritmo de Fisher Yates / barajar cartas
+     dobleItems = dobleItems.sort(()=>{return Math.random()-0.5});
+     console.log(dobleItems);
+
+     // mostrar imagenes en tablero 
+      dobleItems.forEach(mostrarCartas => {
+      let imagenesCartas = mostrarCartas.image
+      let divIconos = document.createElement('img')
+          divIconos.setAttribute ('src', '../imagenes/carta tapada.jpg')
+          divIconos.className ='estiloCartas'
+          divIconos.src = imagenesCartas
+          divIconos.addEventListener('click', destapar)
+          divCartas.appendChild(divIconos)
+    
+    });
+        
+        
+
+        //dar vuelta a las tarjetas
+        function destapar(id){
+          tarjetasDestapadas++;
+          console.log(tarjetasDestapadas);
+
+          if(tarjetasDestapadas==1){
+            //mostrar primera tarjeta
+            tarjeta1 = document.getElementById(id);
+            primerResultado = dobleItems[id]
+            tarjeta1.innerHTML = primerResultado;
+
+            //deshabilitar primer boton
+            tarjeta1.disabled = true;
+          }else if (tarjetasDestapadas ==2){
+            //mostrar segundo numero
+            tarjeta2 = document.getElementById(id);
+            segundoResultado = dobleItems[id];
+            tarjeta2.innerHTML = segundoResultado;
+
+            //deshabilitar segundo boton
+            tarjeta2.disabled = true;
+
+            // incrementar movimientos
+            movimientos++;
+            mostrarMoves.innerHTML = `Moves:${moves}`;
+            
+            if (primerResultado == segundoResultado){
+              //Encerar contador tarjetas destapadas
+              tarjetasDestapadas = 0;
+
+              //Aumentar score
+              score++;
+              mostrarScore.innerHTML = `Score:${score}`;
+
+            }
+
+          };
+          
+        }
+
+
+
+
+
+  
   return el;
 };
 
-
+console.log(typeof(App))
 export default App;
