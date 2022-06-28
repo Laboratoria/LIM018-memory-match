@@ -5,10 +5,11 @@
 import pokemon from '../data/pokemon/pokemon.js';
 console.log(pokemon.items);
 
-const App = () => {
+
  
 
-
+  const App = () => {
+    
 
 
 
@@ -45,35 +46,13 @@ const App = () => {
     // div_img_int.appendChild(img);
     
 
-    // const content = document.createTextNode(` INSTRUCCIONES 
-    //  1. Debajo de cada carta hay una imagen
-    //  2. Cada vez que hagas un click sobre una carta, ésta se volteará y verás la imagen que esconde.
-    //  3. Ahora tendrás que buscar dicha imagen volteando otra carta. Si las imágenes son idénticas las cartas se quedarán volteadas, en otro caso se esconderán.
-    //  4. Para ganar tendrás que voltear todas las cartas con sus pares.`);
-    //  content.className = 'content'
-    //  div_img_int.appendChild(content);                                        
     
-    //  div_contenedor.appendChild(div_title);
-    //  div_contenedor.appendChild(div_img_int);
-   
-
     //  return div_contenedor ;
 
 
 
 
-    //  crea un nuevo div
-    // y añade contenido
-    // var newDiv = document.createElement("div");
-    // var newContent = document.createTextNode(` INSTRUCCIONES 
-    //  1.Debajo de cada carta hay una imagen
-    //  2. Cada vez que hagas un click sobre una carta, esta se volteará y verás la imagen que esconde.
-    //  3. Ahora tendrás que buscar dicha imagen volteando otra carta. Si las imágenes son idénticas las cartas se quedarán volteadas, en otro caso se esconderán.
-    //  4. Para ganar tendrás que voltear todas las cartas con sus pares.`);
-    // newDiv.appendChild(newContent); //añade texto al div creado.
-    // // // // añade el elemento creado y su contenido al DOM
-    // var currentDiv = document.getElementById("div1");
-    // document.body.insertBefore(newDiv, currentDiv);
+    
 
   
     //

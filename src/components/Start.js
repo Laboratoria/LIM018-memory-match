@@ -9,7 +9,7 @@ const Start = () => {
     div_title.appendChild(title);
     const sub_title = document.createElement('h2');//hijo de div title
     sub_title.className = 'sub_title';
-    sub_title.innerText = 'Bienvenidos';
+    sub_title.innerText = '¡Bienvenidos!';
     div_title.appendChild(sub_title);
     
     const div_img_text = document.createElement('div');//padre2
@@ -18,8 +18,8 @@ const Start = () => {
 
     const img = document.createElement('img');//hijo de padre 2( div img int)
     img.className = 'img';
-    img.src = 'ash-pikachu.2.png';
-    img.alt = 'Logo ash y pikachu';
+    img.src = 'home-pikachu.png';
+    img.alt = 'pikachu';
     div_img_text.appendChild(img);
 
     const div_text = document.createElement('div');//hijo de padre2  (div img int)
@@ -27,7 +27,7 @@ const Start = () => {
      
      const title_text = document.createElement('h3');//hijo de div text
      title_text.className = 'title_text';
-     title_text.innerText = 'INSTRUCCIONES';
+     title_text.innerText = 'Instrucciones';
      div_text.appendChild(title_text);
 
     
@@ -38,7 +38,7 @@ const Start = () => {
 
      const p1 = document.createElement('p1');
      p1.className = 'p1';
-     p1.innerText = '1. Debajo de cada carta hay una imagen';
+     p1.innerText = '1. Debajo de cada carta hay una imagen.';
      div_p.appendChild(p1);
      const p2 = document.createElement('p2');
      p2.className = 'p2';
