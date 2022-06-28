@@ -1,4 +1,5 @@
-* {
+
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -96,3 +97,40 @@ html {
     justify-content:flex-start;
  }
  
+/* Para usar medidas Rem: 1 rem equivale a 10px; */
+html {
+    font-size: 62.5%;
+}
+.div_end  {
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+
+.input_name {
+    font-family:fantasy;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    width: 53.8rem;
+    height: 8rem;
+    border-radius: 1rem;
+}
+
+.btn_play {
+    font-family:fantasy;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    width: 27.9rem;
+    height: 6.4rem;
+    border-radius: 1.5rem;
+   
+} 
+
+span {
+    font-family:fantasy;
+    font-style: normal;
+    font-size: 4rem;
+}
