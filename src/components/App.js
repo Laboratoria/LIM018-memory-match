@@ -51,10 +51,10 @@ const App = () => {
 
 
   /* end.className = 'App';
-  end.textContent = 'Soy Jackie!'; */
+  end.textContent = 'Soy Jackie!';  */
 
   return div_end;
-  //return `${inputName}` + `${btn_play}`;
+  
 };
 
 export default App;

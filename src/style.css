@@ -10,7 +10,7 @@ html {
 .div_end  {
     display: flex;
     justify-content: space-evenly;
-    background-color: red;
+    
     
 }
 
@@ -22,8 +22,6 @@ html {
     width: 53.8rem;
     height: 8rem;
     border-radius: 1rem;
-      
-
 }
 
 .btn_play {
