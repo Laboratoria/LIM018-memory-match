@@ -14,66 +14,74 @@ import webdev from '../data/webdev/webdev.js'
 //   .then(resp => resp.json())
 //   .then(console.log)
 //   .catch(console.error);
-//
+
+//------Duplicar data 
+let arrayWebdev = webdev.items
+let arrayDoble = arrayWebdev.concat(arrayWebdev)
+//console.log(arrayDoble)
+
+//------Funcion mezclar cartas Fisher-Yates
+const shuffle = (array) => {
+  for (let i = array.length - 1; i > 0; i--) { // Bucle para pasar por todos los elementos del array, empezando desde el ultimo elemento.
+    let j = Math.floor(Math.random() * (i + 1)) // El metodo Math.random() devuele un numero aleatorio entre el 0 y 1, Math.floor devuelve el maximo entero menor o igual a un numero (si es 5.99 devolvera 5)
+    let temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+  }
+  return array
+}
+//let arrayExam = ['carro','dos','tres','cuatro','cinco','seis']
+//console.log(shuffle(arrayExam))
+
+let arrayRandom = shuffle(arrayDoble)
+//console.log(arrayRandom)
+
+//----- Creando etiquetas div y img
+
+const divCard = document.createElement('div')
+divCard.className = 'divCartas'
+
+arrayRandom.forEach(element => {
+  let imgCard = element.image
+  //console.log(imagenesCartas)
+  let divIcons = document.createElement('img')
+  divIcons.src = imgCard
+  divIcons.className = 'estiloCartas'
+  
+  divCard.appendChild(divIcons)
+//console.log(imagenesCartas)
+})
+
+//---------
+const usuario = (nombre) => {
+  let usuarioId = prompt('Ingresa tu nombre')
+  let usuario = document.getElementById('usuario')
+  usuario.innerHTML = usuarioId
+
+  return  usuario
+}
 
 
+/*function usuario() {
+  //let botonAJugar = document.getElementById('botonAJugar')
 
+  //.addEventListener ('click', () =>{
+    let usuarioId = document.getElementById('userName').value
+    let usuario = document.getElementById('usuario')
+    usuario.innerHTML = usuarioId
+  //})
+}*/
+
+//--------
 const App = () => {
   const el = document.createElement('div');
-
-import webdev from '../data/webdev/webdev.js';
-console.log(webdev.items);
-
-  const App = () => {
-  const el = document.createElement('div');
-    el.className = 'App';
   //el.textContent = 'Hola mundo!';
   //return el;
-  const divCartas = document.createElement('div')
-
-
-  let webdevArray = webdev.items
-  let dobleItems = webdevArray.concat(webdevArray)
-
-//console.log(dobleItems)
-
-  dobleItems.forEach(mostrarCartas => {
-    let imagenesCartas = mostrarCartas.image
-    //console.log(imagenesCartas)
-    let divIconos = document.createElement('img')
-    divIconos.className = 'estiloCartas'
-
-    divIconos.src = imagenesCartas
-
-    divCartas.appendChild(divIconos)
-  //console.log(imagenesCartas)
   
-  });
+  el.appendChild(divCard)
 
-  //---
-  //const divCartas = document.createElement('div')
+  usuario()
 
-  //divCartas.className = 'divCartas'
-  //el.appendChild(divCartas)
-
-  /*let items = webdev.items
-  let dobleItems = items.slice()
-  //console.log(dobleItems)
-  for (let i=0; i<items.length; i++) {
-    let imagen = items[i].image
-    let dobleImagen = dobleItems[i].image
-    //console.log(typeof(imagen))
-    let imgCartas = document.createElement('img')
-    let imgDoble = document.createElement('img')
-    imgCartas.className = 'estiloCartas'
-    imgDoble.className = 'estiloCartas'
-    
-    imgCartas.src = imagen // accedemos a la url de la etiqueta img
-    imgDoble.src = dobleImagen
-
-    divCartas.appendChild(imgCartas)
-    divCartas.appendChild(imgDoble)
-  }*/
   return el;
 };
 
