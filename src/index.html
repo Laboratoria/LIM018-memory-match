@@ -13,34 +13,35 @@
 
     <main>
       <div class="img">
-        <p>MEMORY MATCH</p>
+        <h1>MEMORY MATCH</h1>
         <img src="imagenes/baraja.jpg" alt="">
       </div>
           <div class="input">
-            <input type="text" class="name" id="usuario" placeholder="Write your name here">
-            <button type="submit" class="boton" onclick=click()>Go Play</button>
+            <input id="nombre" class="name" type="text" placeholder="Escribe tu nombre">
+            <button type="submit" class="boton" onclick="click();">Enviar</button>
           </div>
    </main>
 
    <header>
-    <h1>Hello:<p id="usuario"></p></h1>
+    <h1 id="usuario"></h1>
   </header>
     <main>
   
       <section>
         <ul>
-          <p id = "moves">Moves: 0</p>
-          <p id = "score">Score: 0</p>
-          <p id = "timer">Time: 0</p>
+          <p id = "moves">Movimientos: 0</p>
+          <p id = "score">Puntuación: 0</p>
+          <p id = "timer">Tiempo: 0</p>
         </ul>
-
+  
       </section>
 
       <section>
         <div id="root"></div>
-        <div id="cardboard"></div>
+      
         
-        <div id="imagenes"></div>
+        
+        
       </section>
     
     </main>
