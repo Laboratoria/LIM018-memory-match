@@ -40,5 +40,3 @@ const cards = document.querySelectorAll('.memoryCard');
 
 
 //-------
-let objetoCartas = document.getElementById('imagenes');
-
