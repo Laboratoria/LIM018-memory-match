@@ -3,10 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Yatra One', cursive;
     
 }
 
 .App {
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;     
     /*background-color: bisque;*/
 }
 
@@ -21,8 +26,7 @@
     
 }
 
-.img p{
-    font-family: 'Yatra One', cursive;
+.img h1{
     font-size: 35px;
     color: white;
     text-align:center;
@@ -41,11 +45,11 @@
 }
 
 h2{
-    font-size: large;
-    font-family: 'Yatra One', cursive;
-    right: 30px;
-    
+  
+    font-size: medium;
+    right: 30px;  
 }
+
 .name{
     border-radius: 10px;
     border-radius: none;
@@ -54,7 +58,6 @@ h2{
     text-align: center;
     margin: 0px auto;
     padding: 10px;
-    font-family: 'Yatra One', cursive;
     font-size: 15px;
 }
 
@@ -68,7 +71,6 @@ h2{
     font-size: 15px;
     padding: 5px;
     text-align: center;
-    font-family: 'Yatra One', cursive;
     font-size: 18px;
 }
 
@@ -107,11 +109,9 @@ main {
 h1{
     font-size:45px;
     justify-content: center;
-    display: block;
-    font-family: 'Yatra One', cursive;
+    display:flex;
     color: red;
     margin-top: 40px;
-
 }
 
 ul {
@@ -121,8 +121,6 @@ ul {
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-    /*margin-left: 450px;*/
-    font-family: 'Yatra One', cursive;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -130,83 +128,59 @@ ul {
 
 }
 
-
-/*
-#cardboard{
-    width: 640px;
-    height: 640px;
-    margin: auto;
+ .cardBoard{
+    width: 840px;
+    height: 440px;
+    justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
-
+    background-color: rgb(173, 183, 183);
+   
 }
 
-.memory-card{
-    width: 25%;
+
+div .memoryCard {
+    width: calc(25% - 10px);
     height: 33%;
-    margin: 5px;
-    position: relative;
+    margin: 5px; 
+    display: flex;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    position: relative;  
 }
 
-.front-face,
-.back-face{
+div .memoryCard:active{
+    transform: scale(0.97);
+}
+
+div .memoryCard.flip{
+    transform: rotateY(180deg);
+}
+
+
+div .front-face,
+div .back-face
+ {
     width: 100%;
     height: 100%;
-    background: #675a10;
+    background: #db302a;
+    padding: 10px;
+    display: flex;
+    border-radius: 20px;
     position: absolute;
 }
-*/
 
-
-
-
-
-
-
-
-
-
-
-.estiloCartas {
-    display: flex;
-    width: 110px;
-    margin: 5px;
-    padding: 5px;
-    
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(50, 50, 60);
-    border-radius: 5px;
-    
-}
-
- div .divCartas {/* contenedor de cartas*/
-    display: flex;
-    flex-wrap: wrap;
-    width: 45%;
-    height: 30%;
-    /*flex-flow: row wrap;*/
-    justify-content: space-around;
-    align-content: center;
-    gap: 15px;
-    position: relative;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid rgb(121, 121, 121);
-    border-radius: 8px;
-    background-color: rgb(183, 183, 183);
-
-    
+.front-face{
+    transform: rotateY(180deg);
 }
 
 
-
-
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   
-    div .divCartas {
+    div .memoryCard {
         flex: 100%;
     }
-    .img p{
+    .img h1{
         width: 10%;
     }
     .name{
@@ -219,16 +193,16 @@ ul {
 
 @media  (max-width: 375px) {
   
-    div .divCartas {
+    div .memoryCard {
         flex: 50%;
     }
-    .estiloCartas {
+    .front-face  {
         display: flex;
         width: 25%;
         margin: 2px;
         padding: 2px;  
     }
-    .img p{
+    .img h1{
         display: flex;
         width: 10%;
     }
@@ -243,5 +217,7 @@ ul {
         width: 10%;
         height: 35px;
         font-size:5px;
-    }
-}
+    }*/
+
+
+
