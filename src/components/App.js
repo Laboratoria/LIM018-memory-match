@@ -13,136 +13,228 @@
 //   .catch(console.error);
 //
 
+//-----Iniocio de Memory Match
 
 import webdev from '../data/webdev/webdev.js';
 console.log(webdev.items);
 
-  const App = () => {
+const App = () => {
   const el = document.createElement('div');
-    el.className = 'App';
+  el.className = 'App';
   //el.textContent = 'Hola mundo!';
 
-  /*saludo usuario
-  
-  function saludo(click){
-    var usuario= document.getElementById('usuario');
-    var username = usuario.value;
-
-  }*/
+  //saludo usuario
+  document.addEventListener("click", function(){
+    let nombre = document.querySelector('#nombre').value
+    document.getElementById("usuario").innerHTML = 'Hola ' + nombre;
+  });    
 
   //crear tablero 
-   /* const cardBoard = document.createElement('#cardBoard');
-    el.appendChild(cardBoard)
-    
-   
-    let webdevArray = webdev.items
-    let dobleItems = webdevArray.concat(webdevArray)
-    console.log(dobleItems)
-    let cardHTML = '';
-    dobleItems.forEach(img => {
-      cardHTML += `
-      <div class='memory-card'>
-       <img class="front-face" src="dobleItems/${img}">
-       <img class="back-face" src="imagenes/carta tapada.jpg">
-      </div>
-      `;
-    });
-
-    cardBoard.innerHTML = cardHTML;
-
-*/
-
-
-
-
-
-
-
-
+  let cardBoard = document.createElement('div');
+  cardBoard.className = 'cardBoard'
+  el.appendChild(cardBoard)  
 
   let webdevArray = webdev.items
   let dobleItems = webdevArray.concat(webdevArray)
-  let tarjetasDestapadas = 0;
-  let tarjeta1 = null;
-  let tarjeta2 = null; 
-  let primerResultado = null;
-  let segundoResultado = null;
-  let moves = 0;
-  let score = 0;
+
+  // Barajar cartas
+  dobleItems = dobleItems.sort(()=>{return Math.random()-0.5});
+  console.log(dobleItems);
+
+  // mostrar imagenes en tablero 
+  dobleItems.forEach(mostrarCartas => {
+    let imagenesCartas = mostrarCartas.image
+
+    let memoryCard = document.createElement('div');
+    memoryCard.className = 'memoryCard'
+    cardBoard.appendChild(memoryCard)
+  
+    let divIconos = document.createElement('img');
+    divIconos.className ='front-face' 
+    divIconos.src = imagenesCartas
+    memoryCard.appendChild(divIconos)
+
+    let divIconos2 = document.createElement('img');
+    divIconos2.className ='back-face' 
+    divIconos2.setAttribute ('src', '../imagenes/carta tapada.jpg');
+    memoryCard.appendChild(divIconos2)
+  });
+
+  
+  return el;
+ 
+};
+
+//console.log(typeof(App))
+export default App;
 
 
-      //crear tablero 
-    const divCartas = document.createElement('div')
-    divCartas.className = 'divCartas'
-    el.appendChild(divCartas)
-    let mostrarMoves = document.getElementById('moves');
-    let mostrarScore = document.getElementById('score');
 
-     // algoritmo de Fisher Yates / barajar cartas
-     dobleItems = dobleItems.sort(()=>{return Math.random()-0.5});
-     console.log(dobleItems);
 
-     // mostrar imagenes en tablero 
-      dobleItems.forEach(mostrarCartas => {
-      let imagenesCartas = mostrarCartas.image
-      let divIconos = document.createElement('img')
-          divIconos.setAttribute ('src', '../imagenes/carta tapada.jpg')
-          divIconos.className ='estiloCartas'
-          divIconos.src = imagenesCartas
-          divIconos.addEventListener('click', destapar)
-          divCartas.appendChild(divIconos)
+
+
+
+
+
+
+
+
+
+
+/*
+    function checkForMarch(){
+      let isMatch = firstCard.dataset.card === secondCard.dataset.card;
+      !isMatch ? disableCards():true;
+    }
+
+    function disableCards(){
+      lockCard = true;
+
+      setTimeout(()=> {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        resetCards();
+      }, 1000);  
+    }
     
-    });
+
+    function resetCards(isMatch = false){
+      if (isMatch){
+        firstCard.removeEvenListener('click', flipCard);
+        secondCard.removeEvenListener('click', flipCard);
+      }
+       [firstCard,secondCard,lockCard] = [null, null, false];   
+    }*/
+
+
+
+
+
+
+
+
+/*
+
+let mostrarMoves = document.getElementById('moves');
+  let mostrarScore = document.getElementById('score');
+
+    // crear tablero 
+    const cardBoard = document.createElement('div');
+    cardBoard.className = 'cardBoard'
+    el.appendChild(cardBoard)
+    
+    
+    // mostrar imagenes en tablero 
+
+    let webdevArray = webdev.items
+    let dobleItems = webdevArray.concat(webdevArray)
+      //console.log(dobleItems)
+
+    dobleItems.forEach(mostrarCartas => {
+    let imagenesCartas = mostrarCartas.image
+    let divIconos = document.createElement('img')
+        divIconos.setAttribute ('src', '../imagenes/carta tapada.jpg')
+        divIconos.className ='estiloCartas'
+        divIconos.src = imagenesCartas
+        divIconos.addEventListener('click', destapar)
+        divCartas.appendChild(divIconos)
+
+      });
+
+    */
+  
+
+  
+
+
+
+    /*cardBoard.innerHTML = cardHTML + cardHTML;
+
+    const cards = document.querySelectorAll('.memory-card');
+      let = firstCard, secondCard;
+      let lockCard = false;
+
+    function flipCard(){
+      if(lockCard) return false;
+      this.classList.add('flip');
+
+      if(!firstCard){
+        firstCard = this; 
+        return false;
+      }
+      secondCard = this;
+    }
+    function checkForMarch(){
+      let isMatch = firstCard.dataset.card === secondCard.divCartas.card;
+      !isMatch ? disableCards():true;
+    }
+
+    function disableCards(){
+      lockCard = true;
+      setTimeout(()=> {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        resetCards();
+      }, 1000);  
+    }
+
+    function resetCards(isMatch = false){
+      if (isMatch){
+        firstCard.removeEvenListener('click', flipCard);
+        secondCard.removeEvenListener('click', flipCard);
+      }
+       [firstCard,secondCard,lockCard] = [null, null, false];   
+    }
+       cards.forEach(card => card.addEventListener('click',flipCard));
+
+
+
+
+/* let tarjetasDestapadas = 0;
+    let tarjeta1 = null;
+    let tarjeta2 = null; 
+    let primerResultado = null;
+    let segundoResultado = null;
+    let moves = 0;
+    let score = 0;
         
-        
+  //dar vuelta a las tarjetas
+    function destapar(id){
+      tarjetasDestapadas++;
+      console.log(tarjetasDestapadas);
 
-        //dar vuelta a las tarjetas
-        function destapar(id){
-          tarjetasDestapadas++;
-          console.log(tarjetasDestapadas);
+      if(tarjetasDestapadas==1){
+  //mostrar primera tarjeta
+         tarjeta1 = document.getElementById(id);
+         primerResultado = dobleItems[id]
+         tarjeta1.innerHTML = primerResultado;
 
-          if(tarjetasDestapadas==1){
-            //mostrar primera tarjeta
-            tarjeta1 = document.getElementById(id);
-            primerResultado = dobleItems[id]
-            tarjeta1.innerHTML = primerResultado;
+  //deshabilitar primer boton
+        tarjeta1.disabled = true;
+        }else if (tarjetasDestapadas ==2){
+  //mostrar segundo numero
+        tarjeta2 = document.getElementById(id);
+        segundoResultado = dobleItems[id];
+        tarjeta2.innerHTML = segundoResultado;
 
-            //deshabilitar primer boton
-            tarjeta1.disabled = true;
-          }else if (tarjetasDestapadas ==2){
-            //mostrar segundo numero
-            tarjeta2 = document.getElementById(id);
-            segundoResultado = dobleItems[id];
-            tarjeta2.innerHTML = segundoResultado;
+   //deshabilitar segundo boton
+        tarjeta2.disabled = true;
 
-            //deshabilitar segundo boton
-            tarjeta2.disabled = true;
-
-            // incrementar movimientos
-            movimientos++;
-            mostrarMoves.innerHTML = `Moves:${moves}`;
+  // incrementar movimientos
+        movimientos++;
+        mostrarMoves.innerHTML = `Moves:${moves}`;
             
-            if (primerResultado == segundoResultado){
-              //Encerar contador tarjetas destapadas
-              tarjetasDestapadas = 0;
+      if (primerResultado == segundoResultado){
+  //Encerar contador tarjetas destapadas
+          tarjetasDestapadas = 0;
 
-              //Aumentar score
-              score++;
-              mostrarScore.innerHTML = `Score:${score}`;
+  //Aumentar score
+        score++;
+        mostrarScore.innerHTML = `Score:${score}`;
 
             }
 
           };
           
-        }
+        }*/
 
-
-
-
-
-  
-  return el;
-};
-
-console.log(typeof(App))
-export default App;
