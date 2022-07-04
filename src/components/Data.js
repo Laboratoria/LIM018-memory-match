@@ -14,9 +14,8 @@ const Data = () => {
     name = myArr[i].id;
     img = myArr[i].image;
     color = myArr[i].bgColor;
-    card +=`<div  style="background-color: ${color}"> <p>${name}</p> <img src="${img}"></div>`;
-
-    
+    card +=`<div style="background-color: ${color}"> <img src="${img}"><p>${name.charAt(0).toUpperCase()}${name.slice(1)}</p></div>`;
+ 
 }
 return card;
     
