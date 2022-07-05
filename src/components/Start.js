@@ -1,7 +1,9 @@
+import Data from './Data.js'
+
 const Start = () => {
  
     const div_contenedor = document.createElement('div'); //abuelo
-    const div_title = document.createElement('div');//padre1
+    const div_title = document.createElement('div');//padre titulo
 
     const title = document.createElement('h1');//hijo de div title
     title.className = 'title';
@@ -53,20 +55,79 @@ const Start = () => {
      p4.innerText = ' 4. Para ganar tendrás que voltear todas las cartas con sus pares.';
      div_p.appendChild(p4);
      
-
-    
-     
-     
+   
      div_contenedor.appendChild(div_title);
      div_contenedor.appendChild(div_img_text);
     
 
-     return div_contenedor ;
+     const div_end = document.createElement('div');//verf
+     div_end.className = 'div_end'
+   
+     const input_name = document.createElement('input');
+     input_name.placeholder = "Escribe tu nombre";
+     input_name.className = 'input_name';
+     
+     const btn_play = document.createElement('button');
+     btn_play.className = 'btn_play';
+     const btn_text = document.createTextNode('Jugar')
+     
+     const message = document.createElement('span');
+   
+     btn_play.appendChild(btn_text);
+     div_end.appendChild(input_name);
+     div_end.appendChild(btn_play);
+     div_end.appendChild(message);
+
+     const div_pokemon = document.createElement('div');///verf
+    //  div_pokemon.className= 'poke';
+    // div_pokemon.innerHTML = Data()
+     div_end.appendChild(div_pokemon);
+     div_contenedor.appendChild(div_end);
+     div_contenedor.appendChild(div_pokemon);//aparecen abajo de input y botn
+     
+
+     btn_play.addEventListener("click", (event) => {
+       event.preventDefault();
+       //let name = input_name.value;
+       if(input_name.value===""){
+         
+         message.innerText = "Escribe tu nombre para jugar";
+         //alert("Escribe tu nombre para empezar a jugar");
+         
+       } else {
+         
+         message.innerText = `Vamos a jugar ${input_name.value}!!!`;
+         //alert(input_name.value);
+       }
+
+       const div_pokemon = document.createElement('div');///verf
+      //  div_pokemon.className= 'poke';
+       div_pokemon.innerHTML = Data();
+       div_end.appendChild(div_pokemon);//
+       
+       const gameBoard =  document.createElement('div');
+       const boardContainer =  document.createElement('div');
+
+       div_end.appendChild(boardContainer);
+       boardContainer.id = ('boardContainer');
+       boardContainer.className = ('boardContainer');
+       boardContainer.appendChild(gameBoard);
+       div_end.appendChild(gameBoard);
+       div_end.appendChild(boardContainer);
+
+  
+
+  
+
+   })
+
+     return div_contenedor;
 
 
+    }
+    export default Start;
 
-
-    
+  
 
   
     //
@@ -82,50 +143,5 @@ const Start = () => {
   // el.className = 'App';
   // el.textcontent = 'Hola mundo';
 // el.innerHTML = 'Hola mundo';
+  
 
-};
-
-export default Start;
-    const div_end = document.createElement('div');
-    div_end.className = 'div_end'
-  
-    const input_name = document.createElement('input');
-    input_name.placeholder = "Escribe tu nombre";
-    input_name.className = 'input_name';
-    
-    const btn_play = document.createElement('button');
-    btn_play.className = 'btn_play';
-    const btn_text = document.createTextNode('Jugar')
-    
-    const message = document.createElement('span');
-  
-    btn_play.appendChild(btn_text);
-    div_end.appendChild(input_name);
-    div_end.appendChild(btn_play);
-    div_end.appendChild(message);
-  
-    btn_play.addEventListener("click", (event) => {
-      event.preventDefault();
-      //let name = input_name.value;
-      if(input_name.value===""){
-        
-        message.innerText = "Escribe tu nombre para jugar";
-        //alert("Escribe tu nombre para empezar a jugar");
-        
-      } else {
-        
-        message.innerText = `Vamos a jugar ${input_name.value}!!!`;
-        //alert(input_name.value);
-      }
-    })
-    
-  
-  
-    /* end.className = 'App';
-    end.textContent = 'Soy Jackie!'; */
-  
-    return div_end;
-    
-  };
-  
-  export default Start;
