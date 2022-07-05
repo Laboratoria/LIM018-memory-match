@@ -6,9 +6,9 @@
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
-      <h1>Hola <p id="usuario"></p></h1>
     </header>
 
     <main>
@@ -16,37 +16,31 @@
         <h1>MEMORY MATCH</h1>
         <img src="imagenes/baraja.jpg" alt="">
       </div>
-          <div class="input">
-            <input id="nombre" class="name" type="text" placeholder="Escribe tu nombre">
-            <button type="submit" class="boton" onclick="click();">Enviar</button>
-          </div>
-   </main>
+      <div class="input">
+        <input id="nombreUsuario" class="name" type="text" placeholder="Escribe tu nombre">
+        <button type="submit" class="boton"><a href="#"" id="botonAJugar">A jugar!</a></button>
+      </div>
+    </main>
 
-   <header>
-    <h1 id="usuario"></h1>
-  </header>
-    <main>
-  
-      <section>
-        <ul>
-          <p id = "moves">Movimientos: 0</p>
-          <p id = "score">Puntuación: 0</p>
-          <p id = "timer">Tiempo: 0</p>
-        </ul>
-  
-      </section>
+    <header>
+      <h1 id="saludoUsuario"></h1>
+    </header>
+      <main>
+        <section>
+          <ul>
+            <p id = "moves">Movimientos: 0</p>
+            <p id = "score">Puntuación: 0</p>
+            <p id = "timer">Tiempo: 0</p>
+          </ul>
+        </section>
 
-      <section>
-        <div id="root"></div>
-      
-        
-        
-        
-      </section>
+        <section>
+          <div id="root"></div>
+        </section>
     
     </main>
     <footer></footer>
+
     <script src="main.js" type="module"></script>
-    
   </body>
 </html>
