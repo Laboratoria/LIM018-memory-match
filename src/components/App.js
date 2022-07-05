@@ -14,13 +14,7 @@ console.log(pokemon);
 //   .catch(console.error);
 
 const App = () => {
-  
- 
-//     const boardContainer =  document.createElement('div');
-//     boardContainer.id = ('boardContainer');
-//     boardContainer.className = ('boardContainer');
-//     div_contenedor.append(boardContainer);
-    
+  // Dibujar aquí el tablero
   
 //     const div_titlePoke = document.createElement('div');
 //     div_titlePoke.id = ('div_titlePoke');

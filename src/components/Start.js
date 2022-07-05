@@ -60,7 +60,9 @@ const Start = () => {
      div_contenedor.appendChild(div_img_text);
     
 
-     const div_end = document.createElement('div');//verf
+
+
+     const div_end = document.createElement('div');
      div_end.className = 'div_end'
    
      const input_name = document.createElement('input');
@@ -77,15 +79,8 @@ const Start = () => {
      div_end.appendChild(input_name);
      div_end.appendChild(btn_play);
      div_end.appendChild(message);
-
-     const div_pokemon = document.createElement('div');///verf
-    //  div_pokemon.className= 'poke';
-    // div_pokemon.innerHTML = Data()
-     div_end.appendChild(div_pokemon);
      div_contenedor.appendChild(div_end);
-     div_contenedor.appendChild(div_pokemon);//aparecen abajo de input y botn
-     
-
+   
      btn_play.addEventListener("click", (event) => {
        event.preventDefault();
        //let name = input_name.value;
@@ -99,27 +94,13 @@ const Start = () => {
          message.innerText = `Vamos a jugar ${input_name.value}!!!`;
          //alert(input_name.value);
        }
-
-       const div_pokemon = document.createElement('div');///verf
-      //  div_pokemon.className= 'poke';
-       div_pokemon.innerHTML = Data();
-       div_end.appendChild(div_pokemon);//
-       
-       const gameBoard =  document.createElement('div');
-       const boardContainer =  document.createElement('div');
-
-       div_end.appendChild(boardContainer);
-       boardContainer.id = ('boardContainer');
-       boardContainer.className = ('boardContainer');
-       boardContainer.appendChild(gameBoard);
-       div_end.appendChild(gameBoard);
-       div_end.appendChild(boardContainer);
-
-  
-
-  
-
-   })
+   
+      });
+   
+   
+     /* end.className = 'App';
+     end.textContent = 'Soy Jackie!'; */
+   
 
      return div_contenedor;
 
@@ -145,3 +126,10 @@ const Start = () => {
 // el.innerHTML = 'Hola mundo';
   
 
+
+
+
+    
+
+  
+  

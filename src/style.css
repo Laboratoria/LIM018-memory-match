@@ -134,41 +134,35 @@ span {
     font-style: normal;
     font-size: 4rem;
 }
- .div_pokemon{  /*padre*/
+ 
+ .div_container_play {  /*padre*/
     display: flex;
-    flex-wrap:wrap;
-    justify-content:  space-evenly;  /*space-between*/
-    /* background-color:darkorange; */
-    width: 80%;
+    flex-wrap: wrap;
+    justify-content:  space-evenly;  
+    background-color:rgb(238, 255, 0);
+    width: 70%;
     margin: auto;
-     /* height: 800px; */
-     padding: 1rem;
-     border: 9px solid rgb(179, 255, 0);
-
+    height: 70%;
+    padding: 1rem;
+    border: 0.3rem solid rgb(25, 0, 255);
+    border-radius: 1rem;
  }
 
-.tarjetaPokemon{   /* hijo*/
-    flex:0 0 15%;  /*0 1 8*/
+.card {   /* hijo*/
+    flex:0 0 15%;  
     margin-bottom: 5%;
-    height: 20rem;  /*300px*/
-    width: 20rem;  /*ultimo*/
+    height: 20rem;  
+    width: 20rem;  
     padding: 0.2rem;
-    /*border-radius: 50%; */ /* circulo*/
-    border: 0.5rem solid;
-    
-
-    background-color: rgb(251, 255, 0);
+    border: 0.2rem solid;
     text-align: center;
-    /* line-height: 100px; 100px */
+    margin-bottom: 1.5rem;
+}
 
-}
-.imagenPokemon {  /*nieto*/
-    border: 1px solid;
-    width: 10rem; /*probando*/
-    background-color: whitesmoke;
-}
-.contenedorNombrePokemon{
-     font-size: 30px;
-     align-items: center;
-     
+
+.pokemon_name {
+    font-family: fantasy;
+    font-style: normal;
+    font-size: 2rem;
+    
 }
