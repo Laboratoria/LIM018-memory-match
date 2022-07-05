@@ -14,7 +14,7 @@
 //   .catch(console.error);
 
 const App = () => {
-  
+  // Dibujar aquí el tablero
   
 };
 

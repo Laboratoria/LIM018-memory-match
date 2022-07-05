@@ -1,9 +1,15 @@
 import pokemon from '../data/pokemon/pokemon.js';
 const Data = () => {
-
-  const myArr = pokemon.items;
+  //array de objetos que están en pokemon.js
+  const arr = pokemon.items;
   //duplicar cartas
+  const myArr = arr.concat(arr);
   //barajar cartas
+  /* function suffle(myArr){
+    for (let i = 0; i< myArr.length;i++){
+
+    } 
+  } */
   //Dibujar cartas
   let card = "";
   let name = "";
@@ -14,7 +20,7 @@ const Data = () => {
     name = myArr[i].id;
     img = myArr[i].image;
     color = myArr[i].bgColor;
-    card +=`<div style="background-color: ${color}"> <img src="${img}"><p>${name.charAt(0).toUpperCase()}${name.slice(1)}</p></div>`;
+    card +=`<div class= "card" style="background-color: ${color}"> <img src="${img}"><p class= "pokemon_name">${name.charAt(0).toUpperCase()}${name.slice(1)}</p></div>`;
  
 }
 return card;
