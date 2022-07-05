@@ -17,16 +17,27 @@
 import webdev from '../data/webdev/webdev.js';
 console.log(webdev.items);
 
+const saludoUsuario = () =>{
+  //let botonAJugar = document.getElementById('botonAjugar')
+    let nombreUsuario = document.getElementById('nombreUsuario').value
+    let saludoUsuario = document.getElementById('saludoUsuario')
+    
+    if (nombreUsuario !== '') {
+      saludoUsuario.innerHTML = `Hola ${nombreUsuario.toUpperCase()}!`
+    } else {
+      alert('No ingresaste tu nombre :D!')
+    }
+    return
+  
+}
+
 const App = () => {
   const el = document.createElement('div');
   el.className = 'App';
   //el.textContent = 'Hola mundo!';
 
   //saludo usuario
-  document.addEventListener("click", function(){
-    let nombre = document.querySelector('#nombre').value
-    document.getElementById("usuario").innerHTML = 'Hola ' + nombre;
-  });    
+  document.getElementById('botonAJugar').addEventListener('click', saludoUsuario)    
 
   //crear tablero 
   let cardBoard = document.createElement('div');
