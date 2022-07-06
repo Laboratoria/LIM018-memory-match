@@ -31,6 +31,10 @@ const saludoUsuario = () =>{
   
 }
 
+/*const funcionVoltear = (e) =>{
+  e.classList.toggle('flip')
+}*/
+
 const App = () => {
   const el = document.createElement('div');
   el.className = 'App';
@@ -60,14 +64,17 @@ const App = () => {
     cardBoard.appendChild(memoryCard)
   
     let divIconos = document.createElement('img');
-    divIconos.className ='front-face' 
+    divIconos.className ='front-face'
+    divIconos.style.backgroundColor = mostrarCartas.bgColor
     divIconos.src = imagenesCartas
+    divIconos.alt = mostrarCartas.id
     memoryCard.appendChild(divIconos)
 
-    let divIconos2 = document.createElement('img');
+    /*let divIconos2 = document.createElement('img');
     divIconos2.className ='back-face' 
-    divIconos2.setAttribute ('src', '../imagenes/carta tapada.jpg');
-    memoryCard.appendChild(divIconos2)
+    divIconos2.setAttribute ('src', 'https://static.vecteezy.com/system/resources/previews/002/358/541/non_2x/programming-icon-free-vector.jpg');
+    memoryCard.appendChild(divIconos2)*/
+    
   });
   return el;
 };

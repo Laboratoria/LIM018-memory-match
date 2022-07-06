@@ -10,23 +10,24 @@
   <body>
     <header>
     </header>
-
     <main>
-      <div class="img">
-        <h1>MEMORY MATCH</h1>
-        <img src="imagenes/baraja.jpg" alt="">
-      </div>
-      <div class="input">
-        <input id="nombreUsuario" class="name" type="text" placeholder="Escribe tu nombre">
-        <button type="submit" class="boton"><a href="#"" id="botonAJugar">A jugar!</a></button>
-      </div>
-    </main>
+      <section class="primeraPantalla">
+        <div class="img">
+          <h1>MEMORY MATCH</h1>
+          <img src="imagenes/baraja.jpg" alt="">
+        </div>
+        <div class="input">
+          <input id="nombreUsuario" class="name" type="text" placeholder="Escribe tu nombre">
+          <button type="submit" class="boton"><a href="#"" id="botonAJugar">A jugar!</a></button>
+        </div>
+      </section>
 
-    <header>
-      <h1 id="saludoUsuario"></h1>
-    </header>
-      <main>
-        <section>
+      <section class="segundaPantalla">
+        <header>
+          <h2 id="saludoUsuario"></h1>
+        </header>
+
+        <section class="tableroPuntaje">
           <ul>
             <p id = "moves">Movimientos: 0</p>
             <p id = "score">Puntuación: 0</p>
@@ -37,10 +38,9 @@
         <section>
           <div id="root"></div>
         </section>
-    
+      </section>
     </main>
     <footer></footer>
-
     <script src="main.js" type="module"></script>
   </body>
 </html>

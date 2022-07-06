@@ -7,25 +7,15 @@
     
 }
 
-.App {
-    width: 640px;
-    height: 640px;
+main, .primeraPantalla, .segundaPantalla {
     display: flex;
-    flex-wrap: wrap;     
-    /*background-color: bisque;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.estiloCartas {
-    width: 75px;
-    margin: 5px;
-    padding: 10px;
-
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(50, 50, 60);
-    border-radius: 5px;
-    
-}
-
+/*------Primera Pantalla-----*/
 .img h1{
     font-size: 35px;
     color: white;
@@ -34,20 +24,6 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);  
-}
-
-
-.input{
-    width: 100%;
-    padding: 90px;
-    background-color: #E7C515;
-    text-align: center;   
-}
-
-h2{
-  
-    font-size: medium;
-    right: 30px;  
 }
 
 .name{
@@ -61,17 +37,27 @@ h2{
     font-size: 15px;
 }
 
+.input{
+    width: 100%;
+    padding: 90px;
+    background-color: #E7C515;
+    text-align: center;   
+}
+
 .boton{
     background-color: red;
     width: 150px;
     height: 45px;
-    color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     font-size: 15px;
     padding: 5px;
     text-align: center;
     font-size: 18px;
+}
+#botonAJugar {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 .boton:hover{
@@ -79,42 +65,20 @@ h2{
    
 }
 
-.estiloCartas {
-    width: 70px;
-    margin: 5px;
-    padding: 10px;
-
-    align-items: center;
-
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(50, 50, 60);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+/*------Segunda Pantalla-----*/
 header {
     position: relative;
-    height: 100%;
-    /*background-color: aquamarine;*/
+    height: 10%;
     text-align: center;   
 }
 
-main {
-   
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-h1{
+h2{
     font-size:45px;
-    justify-content: center;
-    display:flex;
     color: red;
     margin-top: 40px;
 }
 
-ul {
+.tableroPuntaje ul {
     width: 430px;
     height: 60px;
     background-color:#E7C515;
@@ -125,42 +89,69 @@ ul {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
 }
 
- .cardBoard{
-    width: 840px;
-    height: 440px;
-    justify-content: space-around;
+#root {
+    width: 100%;
+}
+
+.App {
+    width: 700px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /*background-color: bisque;*/
+}
+
+/*.cardBoard {
+    width: 500px;
+    height: 400px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
     background-color: rgb(173, 183, 183);
    
 }
 
-
-div .memoryCard {
+.memoryCard, .back-face {
+    width: 80px;
+    width: 80px;
     width: calc(25% - 10px);
     height: 33%;
-    margin: 5px; 
+    margin: 5px;
+    border-radius: 8px;
     display: flex;
     transform-style: preserve-3d;
     transition: 0.3s;
-    position: relative;  
+    position: relative;
+    position: relative;
+    
+    
 }
 
-div .memoryCard:active{
+div .memoryCard {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/358/541/non_2x/programming-icon-free-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+div .memoryCard:active {
     transform: scale(0.97);
 }
 
-div .memoryCard.flip{
+div .memoryCard.flip {
     transform: rotateY(180deg);
 }
 
+.flip {
+    transform: rotateY(180deg);
+}
 
-div .front-face,
-div .back-face
- {
+.front-face, .back-face {
     width: 100%;
     height: 100%;
     background: #db302a;
@@ -168,11 +159,88 @@ div .back-face
     display: flex;
     border-radius: 20px;
     position: absolute;
+    
+}*/
+
+/*----------*/
+.cardBoard {
+    width: 500px;
+    height: 400px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: rgb(173, 183, 183);
+    border-radius: 10px;
+}
+.memoryCard {
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgb(50, 50, 60);
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
 }
 
-.front-face{
-    transform: rotateY(180deg);
+div .memoryCard {
+    background-image: url("https://www.seekpng.com/png/full/304-3047371_coding-icon-programming-signs.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
 }
+
+.front-face {
+    width: 80px;
+    height: 80px;
+    
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    backface-visibility: hidden;
+
+    transform: rotateY(180deg);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+/*.front-face{
+    transform: rotateY(180deg);
+}*/
+
+/*.estiloCartas {
+    width: 70px;
+    margin: 5px;
+    padding: 10px;
+
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(50, 50, 60);
+    border-radius: 5px;
+    cursor: pointer;
+}*/
+
+
+
+
+
+
+
+
 
 
 /*@media (max-width: 600px) {
