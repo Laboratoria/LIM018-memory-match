@@ -29,7 +29,7 @@ const Data = () => {
     name = myArr[i].id;
     img = myArr[i].image;
     color = myArr[i].bgColor;
-    card +=`<div class= "card" style="background-color: ${color}"> <img src="${img}" ><p class= "pokemon_name">${name.charAt(0).toUpperCase()}${name.slice(1)}</p></div>`;
+    card +=`<div class= "card" style="background-color: ${color}"><img src="${img}" ><p class= "pokemon_name">${name.charAt(0).toUpperCase()}${name.slice(1)}</p></div>`;
   
 }
 return card;
