@@ -173,6 +173,7 @@ div .memoryCard.flip {
     align-items: center;
 
     background-color: rgb(173, 183, 183);
+    border-radius: 10px;
 }
 .memoryCard {
     width: 80px;
@@ -215,11 +216,6 @@ div .memoryCard {
     
 }
 
-.flip {
-    transform: rotateY(180deg);
-    /*background-image: url("https://cdn-icons-png.flaticon.com/512/22/22935.png");*/
-    transition: transform 0.4s;
-}
 
 /*.front-face{
     transform: rotateY(180deg);
