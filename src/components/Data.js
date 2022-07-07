@@ -5,11 +5,19 @@ const Data = () => {
   //duplicar cartas
   const myArr = arr.concat(arr);
   //barajar cartas
-  /* function suffle(myArr){
-    for (let i = 0; i< myArr.length;i++){
+  
 
-    } 
-  } */
+  
+  
+  function shuffle(myArr) {    // Función para barajar cartas y desordenarlas
+    return myArr.sort(() => { return Math.random() - 0.5 });//utilizamos sort para desordenar los 18 items mediante el método math.random
+  }
+  
+  const sortedPokemon = shuffle(myArr);
+  console.log(sortedPokemon)
+
+
+  //-----------------------------------
   //Dibujar cartas
   let card = "";
   let name = "";
@@ -23,6 +31,7 @@ const Data = () => {
     card +=`<div class= "card" style="background-color: ${color}"> <img src="${img}" ><p class= "pokemon_name">${name.charAt(0).toUpperCase()}${name.slice(1)}</p></div>`;
  
 }
+// console.log(card);
 return card;
     
   }
