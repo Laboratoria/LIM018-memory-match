@@ -77,7 +77,10 @@ const Start = () => {
          
        } else {
         document.getElementById('root').innerHTML = "";  
-        document.getElementById('root').innerHTML = `<div> Jugador: ${name_player}</div> <div>${Data(name_player).outerHTML}</div>`;
+        document.getElementById('root').innerHTML = `<div class= "table">
+          <div class= "head_table"><img class= "img_table_title" src='../img/title.png'/>
+          <div class= "name_table_player">Jugador: ${name_player.charAt(0).toUpperCase()}${name_player.slice(1)}</div></div>
+          <div class="table">${Data(name_player).outerHTML}</div></div>`;
                  //message.innerText = `Vamos a jugar ${input_name.value}!!!`;
          //alert(input_name.value); Comentario 83 implementar (pro)
        }

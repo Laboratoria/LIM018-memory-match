@@ -21,7 +21,7 @@ const Data = () => { // parámetro jugador
     return myArr;
   } 
   suffle(myArr);
-  //Dibujar cartas
+  //Dibujar cartas // todo esto debe ser cambiado
   let card = "";
   let name = "";
   let img = "";
