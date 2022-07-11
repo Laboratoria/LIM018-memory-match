@@ -1,42 +1,38 @@
 import Data from './Data.js';
 const Start = () => {
- 
-    const div_contenedor = document.createElement('div'); //abuelo
-    const title_img = document.createElement('img');//padre titulo
-    title_img.className = "title_img";
-    const title = document.createElement('h1');//hijo de div title
-    title.className = 'title';
-    title.innerText = 'MEMORY MATCH';
-    div_title.appendChild(title);
-    const sub_title = document.createElement('h2');//hijo de div title
-    sub_title.className = 'sub_title';
-    sub_title.innerText = '¡Bienvenidos!';
-    div_title.appendChild(sub_title);
-    
-    const div_img_text = document.createElement('div');//padre2
-    div_img_text.className = 'div_img_text';
+    //Contenedor del componente Start
+    const div_start = document.createElement('div');
+    div_start.className = "div_start";
+    //Título de la App
+    const img_title = document.createElement('img');
+    img_title.className = "img_title";
+    img_title.src = '../img/title.png';
+    img_title.alt = 'title';
+    div_start.appendChild(img_title);
+    //Imagen de Pikachu junto a las instrucciones
+    const div_container_pikachu_instruction = document.createElement('div');
+    div_start.appendChild(div_container_pikachu_instruction);
+      //Pikachu
+    const img_pikachu = document.createElement('img');
+    img_pikachu.className = 'img_pikachu';
+    img_pikachu.src = './img/pikachu.png';
+    img_pikachu.alt = 'pikachu';
+    div_container_pikachu_instruction.appendChild(img_pikachu);
+    div_container_pikachu_instruction.className = "div_container_pikachu_instruction";
+    //Instrucciones
+    const div_instruction= document.createElement('div');
+    div_instruction.className = 'div_instruction';
+    div_container_pikachu_instruction.appendChild(div_instruction);
 
-
-    const img = document.createElement('img');//hijo de padre 2( div img int)
-    img.className = 'img';
-    img.src = 'home-pikachu.png';
-    img.alt = 'pikachu';
-    div_img_text.appendChild(img);
-
-    const div_text = document.createElement('div');//hijo de padre2  (div img int)
-    div_img_text.appendChild(div_text);
+    const title_welcome = document.createElement('h1')
+     title_welcome.className = 'title_welcome';
+     title_welcome.innerText = 'Bienvenidos';
+     div_instruction.appendChild(title_welcome);
      
-     const title_text = document.createElement('h3');//hijo de div text
-     title_text.className = 'title_text';
-     title_text.innerText = 'Instrucciones';
-     div_text.appendChild(title_text);
-
-    
     const div_p = document.createElement('div');
     div_p.className = 'div_p';
-    div_text.appendChild(div_p);
+    div_instruction.appendChild(div_p);
     
-
      const p1 = document.createElement('p1');
      p1.className = 'p1';
      p1.innerText = '1. Debajo de cada carta hay una imagen.';
@@ -54,13 +50,7 @@ const Start = () => {
      p4.innerText = ' 4. Para ganar tendrás que voltear todas las cartas con sus pares.';
      div_p.appendChild(p4);
      
-   
-     div_contenedor.appendChild(div_title);
-     div_contenedor.appendChild(div_img_text);
-    
-
-
-
+    //final de la página
      const div_end = document.createElement('div');
      div_end.className = 'div_end'
    
@@ -75,7 +65,7 @@ const Start = () => {
      div_end.appendChild(input_name);
      div_end.appendChild(btn_play);
      
-     div_contenedor.appendChild(div_end);
+     div_start.appendChild(div_end);
     // vaciar la vista con innerHML = "", luego llamar a la función Data (jugador);
      let play = btn_play.addEventListener("click", (event) => {
        event.preventDefault();
@@ -95,7 +85,7 @@ const Start = () => {
       });
    
     play;
-    return div_contenedor;
+    return div_start;
 
   }
     export default Start;
