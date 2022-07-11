@@ -15,8 +15,11 @@
 
 const App = () => {
 
- // dibujar el tablero y traer las cartas aquí
- //appendchild de APP y luego de DATA en el MAIN
+  //appendchild de APP y luego de DATA en el MAIN
+  const head = document.createElement('div');
+  head.className = 'head';
+
+
 };
 
 export default App;
