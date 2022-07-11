@@ -2,8 +2,8 @@ import Data from './Data.js';
 const Start = () => {
  
     const div_contenedor = document.createElement('div'); //abuelo
-    const div_title = document.createElement('div');//padre titulo
-
+    const title_img = document.createElement('img');//padre titulo
+    title_img.className = "title_img";
     const title = document.createElement('h1');//hijo de div title
     title.className = 'title';
     title.innerText = 'MEMORY MATCH';
