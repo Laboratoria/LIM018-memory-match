@@ -1,11 +1,11 @@
-import Data from './Data.js';
 const Start = () => {
+
     //Contenedor del componente Start
     const div_start = document.createElement('div');
     div_start.className = "div_start";
     //Título de la App
     const img_title = document.createElement('img');
-    img_title.className = "img_title";
+    img_title.className = 'img_title';
     img_title.src = '../img/title.png';
     img_title.alt = 'title';
     div_start.appendChild(img_title);
@@ -60,34 +60,16 @@ const Start = () => {
      
      const btn_play = document.createElement('button');
      btn_play.className = 'btn_play';
+     btn_play.setAttribute('type', 'button');
      const btn_text = document.createTextNode('Jugar')
      btn_play.appendChild(btn_text);
      div_end.appendChild(input_name);
      div_end.appendChild(btn_play);
      
      div_start.appendChild(div_end);
-    // vaciar la vista con innerHML = "", luego llamar a la función Data (jugador);
-     let play = btn_play.addEventListener("click", (event) => {
-       event.preventDefault();
-       let name_player = input_name.value;
-       if(input_name.value===""){
-        //window.prompt("Escribe tu nombre para empezar a jugar");
-        //message.innerText = "Escribe tu nombre para jugar";
-        alert("Escribe tu nombre para empezar a jugar");
-         
-       } else {
-        document.getElementById('root').innerHTML = "";  
-        document.getElementById('root').innerHTML = `<div class= "table">
-          <div class= "head_table"><img class= "img_table_title" src='../img/title.png'/>
-          <div class= "name_table_player">Jugador: ${name_player.charAt(0).toUpperCase()}${name_player.slice(1)}</div></div>
-          <div class="table">${Data(name_player).outerHTML}</div></div>`;
-                 //message.innerText = `Vamos a jugar ${input_name.value}!!!`;
-         //alert(input_name.value); Comentario 83 implementar (pro)
-       }
-   
-      });
-   
-    play;
+  
+     
+    
     return div_start;
 
   }

@@ -16,6 +16,7 @@
 const App = () => {
 
  // dibujar el tablero y traer las cartas aquí
+ //appendchild de APP y luego de DATA en el MAIN
 };
 
 export default App;
