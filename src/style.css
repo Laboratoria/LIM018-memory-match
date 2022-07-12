@@ -98,21 +98,24 @@ html {
     
  }
 
- .head_table {
+
+/*Header del tablero-Componente Player*/
+.head {
     
     display: flex;
     margin-bottom: 2.5rem;
+    background-color: #4DAD5B;git 
 
  }
 
- .img_table_title{
+ .img_title_table{
     width: 65rem;
     height: 12rem;
     margin-left: 9.4rem;
     margin-top: 2.5rem;
  }
 
- .name_table_player{
+ .input_name_player{
     display: flex;
     align-items: center;
     width: 34.3rem;
@@ -122,7 +125,6 @@ html {
     font-size: 4rem;
     font-weight:bold;
  }
-
 
  /*inicio estilos cartas volteadas*/
 

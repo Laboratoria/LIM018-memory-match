@@ -1,8 +1,8 @@
-import Start from './Start';
+import Head from './Head';
 
-describe('Start', () => {
+describe('Head', () => {
   it('should render without crashing', () => {
-    const el = Start();
+    const el = Head();
     expect(el instanceof HTMLElement).toBe(true);
   });
 });

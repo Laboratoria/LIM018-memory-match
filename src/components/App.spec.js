@@ -1,8 +1,9 @@
-import App from './App.js';
-
+import App from './App'
 describe('App', () => {
-  it('should render without crashing', () => {
-    const el = App();
-    expect(el instanceof HTMLElement).toBe(true);
+    it('should render without crashing', () => {
+      const el = App( [{id:'bulbasaur'}]);
+      expect(el ).toContain('bulbasaur');
+      
+    });
   });
-});
+  
