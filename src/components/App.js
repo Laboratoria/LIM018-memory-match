@@ -11,18 +11,18 @@ const App = () => { // parámetro jugador
   myArr.sort(()=> Math.random()-0.5);
   
   //Dibujar cartas // todo esto debe ser cambiado
-    const div_box = document.createElement('div');
-    div_box.className = 'div_box';
+  const div_box = document.createElement('div');
+  div_box.className = 'div_box'; 
+  
     myArr.forEach((item)=>{
-    
-    const div_table = document.createElement('div');
-    div_table.className = 'div_table';
+    //const div_table = document.createElement('div');
+    //div_table.className = 'div_table';
     
     const card = document.createElement('div');
     card.classList = 'card';
     
     card.setAttribute('id', item.id);
-    //card.setAttribute('style', item.bgColor);
+    
 
     const face = document.createElement('img');
     face.classList = 'face';
@@ -31,11 +31,11 @@ const App = () => { // parámetro jugador
     const back = document.createElement('div');
     back.classList = 'back';
 
-    
+    //div_table.appendChild (card);
+    div_box.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
-    div_table.appendChild (card);
-    div_box.appendChild(div_table);
+    
 
     card.addEventListener('click', (e)=>{
       e.preventDefault();

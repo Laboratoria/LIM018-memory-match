@@ -93,29 +93,26 @@ html {
 } 
  /* Tablero */
 
- .table{
-    background-color: #4DAD5B;
-    
- }
+
 
 
 /*Header del tablero-Componente Player*/
 .head {
-    
     display: flex;
-    margin-bottom: 2.5rem;
-    background-color: #4DAD5B;git 
+    padding-bottom: 2.5rem;
+    background-color: #4DAD5B;
 
  }
 
- .img_title_table{
+ .img_title_table {
+
     width: 65rem;
     height: 12rem;
     margin-left: 9.4rem;
     margin-top: 2.5rem;
  }
 
- .input_name_player{
+ .input_name_player {
     display: flex;
     align-items: center;
     width: 34.3rem;
@@ -128,18 +125,23 @@ html {
 
  /*inicio estilos cartas volteadas*/
 
- .div_box {
+/*  .div_box {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     height: 100vh;
- }
-.div_table{
-    display: grid;
-    grid-template-rows: repeat(4, 10rem);
-    grid-template-columns: repeat(4, 10rem);
+    background-color: #4DAD5B;
+ } */
+.div_box{
+    display: grid; 
+    justify-content: center;
+    grid-template-rows: repeat(3, 10rem);
+    grid-template-columns: repeat(6, 10rem);
     perspective: 800px;
     grid-gap: 2rem;
+    background-color: #E6BC2F; 
+    padding-top: 3.3rem;
+    padding-bottom: 3.5rem;
 }
  .back{
     background-image: url('../img/pokebola.png');
@@ -167,13 +169,13 @@ html {
  }
 
  /*fin estilos cartas volteadas*/
-span {
+/* span {
     
     font-style: normal;
     font-size: 4rem;
 }
  
- .div_container_play {  /*padre*/
+ .div_container_play {  /*padre
     display: flex;
     flex-wrap: wrap;
     justify-content:  space-evenly;  
@@ -183,7 +185,7 @@ span {
     height: 100%;
     padding: 1rem;
     
- }
+ }*/
 /* 
 .card {   /* hijo*
     flex:0 0 15%;  

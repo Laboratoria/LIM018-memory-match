@@ -27,8 +27,6 @@ btn_play.addEventListener('click', (event) => {
    root.innerHTML = ""; 
    root.appendChild(Head(input_name));
    root.appendChild(App());
-
-   
   }
 
  });
