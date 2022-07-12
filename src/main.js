@@ -4,16 +4,13 @@ import App from './components/App.js';
 
 const root = document.getElementById('root'); //hizo la magia
 root.appendChild(Start());
-
 //console.log(Start());
 //innetHTML = ""; borro el contenido (a Root), sobreescribo Data
 //limpiar la página y añadir el componente
 //document.getElementById('root').appendChild(App());
-
-
 const btn_play = root.querySelector('.btn_play');
 const input_name = root.querySelector('.input_name');
-console.log(input_name);
+//console.log(input_name);
 btn_play.addEventListener('click', (event) => {
   event.preventDefault();
 

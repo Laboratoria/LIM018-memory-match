@@ -6,16 +6,11 @@
 //
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
-
-
 // fetch('./data/pokemon/pokemon.json')
 //   .then(resp => resp.json())
 //   .then(console.log)
 //   .catch(console.error);
-
- //hizo la magia
-
- //const root = document.getElementById('root');
+//const root = document.getElementById('root');
  
 const Head = (input_name) => {
    
@@ -30,7 +25,6 @@ const Head = (input_name) => {
 
 
   const input_name_player = document.createElement('div');
-  //const input_name = root.querySelector('.input_name');
   input_name_player.className = 'input_name_player';
   input_name_player.innerText = `Jugador: ${input_name.value.toUpperCase()}`;
   head.appendChild(input_name_player);

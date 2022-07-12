@@ -10,28 +10,32 @@ const App = () => { // parámetro jugador
   //barajar cartas
   myArr.sort(()=> Math.random()-0.5);
   
-  //Dibujar cartas // todo esto debe ser cambiado
+  //Dibujar cartas // 
   const div_box = document.createElement('div');
-  div_box.className = 'div_box'; 
+  div_box.classList = 'div_box'; 
   
     myArr.forEach((item)=>{
-    //const div_table = document.createElement('div');
-    //div_table.className = 'div_table';
+  
     
     const card = document.createElement('div');
     card.classList = 'card';
     
     card.setAttribute('id', item.id);
-    
+  
 
     const face = document.createElement('img');
     face.classList = 'face';
     face.src = item.image;
+    /* face.innerText =  `${item.id}`;
+    console.log(face.innerText); */
+   /*  const span_name = document.createElement('span');
+    span_name.innerText = `${item.id}`
+    face.appendChild(span_name); */
 
     const back = document.createElement('div');
     back.classList = 'back';
 
-    //div_table.appendChild (card);
+    
     div_box.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
@@ -41,10 +45,16 @@ const App = () => { // parámetro jugador
       e.preventDefault();
       face.classList.toggle('toggleCard');
       card.classList.toggle('toggleCard');
-
+      //check(e);
     });
     
   });
+
+  //Emparejar cartas
+
+  /* const check = (e) => {
+    const clicked = e.target;
+  } */
 
 return div_box;
 }
