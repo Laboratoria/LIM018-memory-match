@@ -1,31 +1,29 @@
 import pokemon from '../data/pokemon/pokemon.js';
 
 //Un componente siempre devuelve un elemento, no un string
-const App = () => { // parámetro jugador
+const App = () => { 
   //array de objetos que están en pokemon.js
   //console.log(name_player);
   const arr = pokemon.items;
-  //duplicar cartas
-  const myArr = arr.concat(arr);
+  //duplicar cartas y barajar
+  const myArr = arr.concat(arr).sort(()=> Math.random()-0.5);
   //barajar cartas
-  myArr.sort(()=> Math.random()-0.5);
+  
   
   //Dibujar cartas // 
   const div_box = document.createElement('div');
   div_box.classList = 'div_box'; 
+
   
     myArr.forEach((item)=>{
-  
-    
     const card = document.createElement('div');
     card.classList = 'card';
-    
-    card.setAttribute('id', item.id);
+    card.setAttribute('id', item.id); //revisar esta línea de código
   
-
     const face = document.createElement('img');
     face.classList = 'face';
     face.src = item.image;
+    //card.setAttribute('id', item.id);
     /* face.innerText =  `${item.id}`;
     console.log(face.innerText); */
    /*  const span_name = document.createElement('span');
@@ -34,28 +32,26 @@ const App = () => { // parámetro jugador
 
     const back = document.createElement('div');
     back.classList = 'back';
-
     
-    div_box.appendChild(card);
+    
     card.appendChild(face);
     card.appendChild(back);
-    
+    div_box.appendChild(card);
 
     card.addEventListener('click', (e)=>{
       e.preventDefault();
+      
       face.classList.toggle('toggleCard');
-      card.classList.toggle('toggleCard');
-      //check(e);
+      card.classList.toggle('toggleCard');  
+   //lógica de validación
+               
     });
     
   });
 
   //Emparejar cartas
 
-  /* const check = (e) => {
-    const clicked = e.target;
-  } */
-
+    
 return div_box;
 }
 

@@ -14,7 +14,7 @@ html {
 .div_start {
     display: flex;
     flex-direction: column;
-    background-color: #4DAD5B;
+    background-color: rgba(77, 173, 91, 0.6);
 }
 .img_title {
     display: flex;
@@ -73,7 +73,7 @@ html {
     height: 5rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    background-color: #E6BC2F;
+    background-color: rgba(230, 188, 47, 0.8);
     border-color: #E6BC2F;
 }
 
@@ -87,8 +87,8 @@ html {
     height: 5rem;
     border-radius: 1.5rem;
     margin-bottom: 1rem;
-    background-color: #E6BC2F;
-    border-color: #E6BC2F;
+    background-color: rgba(230, 188, 47, 0.8);
+    border-color: rgba(230, 188, 47, 0.8);
    
 } 
  /* Tablero */
@@ -100,7 +100,7 @@ html {
 .head {
     display: flex;
     padding-bottom: 2.5rem;
-    background-color: #4DAD5B;
+    background-color: rgba(77, 173, 91, 0.6);
 
  }
 
@@ -139,13 +139,14 @@ html {
     grid-template-columns: repeat(6, 10rem);
     perspective: 800px;
     grid-gap: 2rem;
-    background-color: #E6BC2F; 
+    background-color: rgba(230, 188, 47, 0.8);
     padding-top: 3.3rem;
     padding-bottom: 3.5rem;
 }
  .back{
-    background-image: url('../img/pokebola.png');
+    background-image: url('../img/pokebola.png'); 
     border-radius: 0.5rem;
+    /* background-color: #E6BC2F; */
  }
 
  .face,
