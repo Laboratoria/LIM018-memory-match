@@ -143,6 +143,29 @@ html {
     padding-top: 3.3rem;
     padding-bottom: 3.5rem;
 }
+
+.img_pokemon {
+    position: absolute;
+    left: 1rem;
+    top:1.5rem;
+    backface-visibility: hidden;
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+    border-radius: 0.5rem;
+}
+
+.text_pokemon{
+    position: absolute;
+    top: 0.5rem;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
  .back{
     background-image: url('../img/pokebola.png'); 
     border-radius: 0.5rem;
@@ -156,6 +179,7 @@ html {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    border-radius: 0.5rem;
  }
 
  .card {

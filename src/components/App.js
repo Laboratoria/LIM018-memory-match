@@ -1,58 +1,55 @@
 import pokemon from '../data/pokemon/pokemon.js';
 
 //Un componente siempre devuelve un elemento, no un string
-const App = () => { 
+const App = () => {
   //array de objetos que están en pokemon.js
   //console.log(name_player);
   const arr = pokemon.items;
   //duplicar cartas y barajar
-  const myArr = arr.concat(arr).sort(()=> Math.random()-0.5);
-  //barajar cartas
-  
-  
+  const myArr = arr.concat(arr).sort(() => Math.random() - 0.5);
   //Dibujar cartas // 
   const div_box = document.createElement('div');
-  div_box.classList = 'div_box'; 
+  div_box.classList = 'div_box';
 
-  
-    myArr.forEach((item)=>{
+  myArr.forEach((item) => {
     const card = document.createElement('div');
     card.classList = 'card';
-    card.setAttribute('id', item.id); //revisar esta línea de código
-  
-    const face = document.createElement('img');
+    card.setAttribute('id', item.id); 
+      
+    const face = document.createElement('div');
+    const img_pokemon = document.createElement('img');
+    img_pokemon.classList = 'img_pokemon';
+    const text_pokemon = document.createElement('span');
+    text_pokemon.classList = 'text_pokemon';
     face.classList = 'face';
-    face.src = item.image;
-    //card.setAttribute('id', item.id);
-    /* face.innerText =  `${item.id}`;
-    console.log(face.innerText); */
-   /*  const span_name = document.createElement('span');
-    span_name.innerText = `${item.id}`
-    face.appendChild(span_name); */
-
+    img_pokemon.src = item.image;
+    face.style.background = item.bgColor;
+    text_pokemon.innerText = item.id.charAt(0).toUpperCase()+item.id.slice(1);
+    face.appendChild(img_pokemon);
+    face.appendChild(text_pokemon);
+        
     const back = document.createElement('div');
     back.classList = 'back';
-    
-    
+
     card.appendChild(face);
     card.appendChild(back);
     div_box.appendChild(card);
 
-    card.addEventListener('click', (e)=>{
+    card.addEventListener('click', (e) => {
       e.preventDefault();
-      
+
       face.classList.toggle('toggleCard');
-      card.classList.toggle('toggleCard');  
-   //lógica de validación
-               
+      card.classList.toggle('toggleCard');
+
+
     });
-    
+
   });
 
   //Emparejar cartas
 
-    
-return div_box;
+
+  return div_box;
 }
 
 export default App;
