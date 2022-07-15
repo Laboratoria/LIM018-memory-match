@@ -13,28 +13,41 @@ root.appendChild(App());
 
 const btn_play = root.querySelector('.btn_play');
 const input_name = root.querySelector('.input_name');
-//console.log(input_name);
+
+//const div_box = document.querySelector('.div_box');
+const card = root.querySelector('.card'); //con querySelectorAll card ya no un elemento, sino un array de elementos 
+
+console.log(card);
+
 btn_play.addEventListener('click', (event) => {
   event.preventDefault();
   if (input_name.value === "") {
     alert('Escribe tu nombre para empezar a jugar');
+    //dibujar el modal 
+      
 
   } else {
     root.innerHTML = "";
    // debugger;
     root.appendChild(Head(input_name));
     root.appendChild(App());
-
+    
   }
 
 }); 
-
+//mover cartas
+//debugger;
 card.addEventListener('click', (e) => {
-  //e.preventDefault();
-  card.classList.toggle('toggleCard');
-  checkCards(e);
+  e.preventDefault();
+  console.log('hola soy yo');
+
+ card.classList.toggle('toggleCard');
+  checkCards(e); 
        
 });
+
+
+
 
  //Emparejar cartas
 const checkCards = (e) => {

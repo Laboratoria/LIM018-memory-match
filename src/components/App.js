@@ -12,7 +12,7 @@ const App = () => {
 
   myArr.forEach((item) => {
     const card = document.createElement('div');
-    card.classList = 'card';
+    card.classList = 'card'; //variable que almacena la carta 
     card.setAttribute('id', item.id); 
       
     const face = document.createElement('div');
@@ -35,9 +35,8 @@ const App = () => {
     card.appendChild(back);
     div_box.appendChild(card);
 
-        
+            
   });
-
 
   return div_box;
 }
