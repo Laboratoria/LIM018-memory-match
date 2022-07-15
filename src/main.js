@@ -1,5 +1,5 @@
-import Start from './components/Start.js';
-import Head from './components/Head.js';
+//import Start from './components/Start.js';
+//import Head from './components/Head.js';
 import App from './components/App.js';
 
 const root = document.getElementById('root'); //hizo la magia-comprendido 
@@ -13,6 +13,7 @@ const root = document.getElementById('root'); //hizo la magia-comprendido
 
 //root.appendChild(Start());
 root.appendChild(App());
+
 //console.log(Start());
 //innetHTML = ""; borro el contenido (a Root), sobreescribo Data
 //limpiar la página y añadir el componente
@@ -32,6 +33,6 @@ btn_play.addEventListener('click', (event) => {
     root.appendChild(App());
   }
 
-});
- */
+}); */
+ 
 

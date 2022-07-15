@@ -25,7 +25,7 @@ const Head = (input_name) => {
 
   const input_name_player = document.createElement('div');
   input_name_player.className = 'input_name_player';
-  input_name_player.innerText = `Jugador: ${input_name.value.toUpperCase()}`;
+  input_name_player.innerText = `Jugador: ${input_name.value.charAt(0).toUpperCase()+input_name.value.slice(1)}`;
   head.appendChild(input_name_player);
 
   return head;
