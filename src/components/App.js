@@ -34,7 +34,7 @@ const App = () => {
     card.appendChild(face);
     card.appendChild(back);
     div_box.appendChild(card);
-
+    //aparecen 2 eventos
     card.addEventListener('click', (e) => {
       //e.preventDefault();
       card.classList.toggle('toggleCard');
