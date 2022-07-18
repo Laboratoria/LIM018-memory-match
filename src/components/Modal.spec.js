@@ -1,9 +1,8 @@
-/* import Head from './Head';
+/* import Modal from './Modal';
 
-describe('Head', () => {
+describe('Modal', () => {
   it('should render without crashing', () => {
-    const el = Head();
+    const el = Modal();
     expect(el instanceof HTMLElement).toBe(true);
   });
-});
- */
+}); */
