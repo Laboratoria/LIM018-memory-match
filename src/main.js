@@ -29,18 +29,7 @@ btn_play.addEventListener('click', (event) => {
 
     })
   } else {
-    root.innerHTML = "";
-    // debugger;
-    
-    root.appendChild(Head(input_name));
-    root.appendChild(App());
-    cards = root.querySelectorAll('.card'); // Nodelist que funciona como un array de elementos 
-    cards.forEach((card) => {
-      card.addEventListener('click', (e) => {
-        card.classList.toggle('toggleCard');
-        checkCards(e);
-      })
-    })
+    play();
 
   }
 
@@ -79,14 +68,14 @@ const checkCards = (e) => {
     const btn_modal_ok = root.querySelector('.ok-btn');
     btn_modal_ok.addEventListener('click', (event) => {
       event.preventDefault();
-      restart();
+      play();
 
     })
 
   }
 }
-
-const restart = () => {
+//empezar a jugar 
+const play = () => {
   root.innerHTML = "";
     // debugger;
     
