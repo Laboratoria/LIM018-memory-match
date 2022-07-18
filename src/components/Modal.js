@@ -1,6 +1,6 @@
 const Modal = (text) => {
-  
-  const div_popup_overlay = document.createElement ('div');
+
+  const div_popup_overlay = document.createElement('div');
   div_popup_overlay.className = 'popup-overlay';
   //modal contenedor
   const div_popup_box_container = document.createElement('div');
@@ -19,7 +19,7 @@ const Modal = (text) => {
   div_text_modal.className = 'popup-message-container';
   const span_text = document.createElement('span');
   span_text.className = 'span-text';
-  span_text.innerText = `${text.charAt(0).toUpperCase()+text.slice(1)}`;
+  span_text.innerText = `${text}`;
   div_text_modal.appendChild(span_text);
   div_popup_box_container.appendChild(div_text_modal);
   //botón
@@ -29,8 +29,8 @@ const Modal = (text) => {
   const name_button_modal = document.createTextNode('Aceptar')
   button_modal.appendChild(name_button_modal);
   div_popup_box_container.appendChild(button_modal);
-  
- return div_popup_overlay;
+
+  return div_popup_overlay;
 }
 
 export default Modal;

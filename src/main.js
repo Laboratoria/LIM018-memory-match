@@ -5,22 +5,20 @@ import Modal from './components/Modal.js';
 
 const root = document.getElementById('root'); //hizo la magia (comprendido) 
 
-const start = root.appendChild(Start());
-
+root.appendChild(Start());
 
 const btn_play = root.querySelector('.btn_play');
 const input_name = root.querySelector('.input_name');
-
 let cards;
 
 btn_play.addEventListener('click', (event) => {
   //console.log("hola")
   event.preventDefault();
-  
+
 
   if (input_name.value === "") {
 
-    const modal_name = root.appendChild(Modal('escribe tu nombre'));
+    const modal_name = root.appendChild(Modal('Escribe tu nombre'));
     const btn_modal_ok = root.querySelector('.ok-btn');
     btn_modal_ok.addEventListener('click', (event) => {
       event.preventDefault();
@@ -64,7 +62,7 @@ const checkCards = (e) => {
   //console.log(toggle_cards.length)
   if (toggle_cards.length === 18) {
 
-    root.appendChild(Modal('ganaste esta partida'));
+    root.appendChild(Modal('Ganaste esta partida. ¡Volver a jugar!'));
     const btn_modal_ok = root.querySelector('.ok-btn');
     btn_modal_ok.addEventListener('click', (event) => {
       event.preventDefault();
@@ -77,16 +75,15 @@ const checkCards = (e) => {
 //empezar a jugar 
 const play = () => {
   root.innerHTML = "";
-    // debugger;
-    
-    root.appendChild(Head(input_name));
-    root.appendChild(App());
-    cards = root.querySelectorAll('.card'); // Nodelist que funciona como un array de elementos 
-    cards.forEach((card) => {
-      card.addEventListener('click', (e) => {
-        card.classList.toggle('toggleCard');
-        checkCards(e);
-      })
+  // debugger;
+  root.appendChild(Head(input_name));
+  root.appendChild(App());
+  cards = root.querySelectorAll('.card'); // Nodelist que funciona como un array de elementos 
+  cards.forEach((card) => {
+    card.addEventListener('click', (e) => {
+      card.classList.toggle('toggleCard');
+      checkCards(e);
     })
+  })
 
 }

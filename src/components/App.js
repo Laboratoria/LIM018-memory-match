@@ -13,8 +13,8 @@ const App = () => {
   myArr.forEach((item) => {
     const card = document.createElement('div');
     card.classList = 'card'; //variable que almacena la carta 
-    card.setAttribute('id', item.id); 
-      
+    card.setAttribute('id', item.id);
+
     const face = document.createElement('div');
     const img_pokemon = document.createElement('img');
     img_pokemon.classList = 'img_pokemon';
@@ -23,7 +23,7 @@ const App = () => {
     face.classList = 'face';
     img_pokemon.src = item.image;
     face.style.background = item.bgColor;
-    text_pokemon.innerText = item.id.charAt(0).toUpperCase()+item.id.slice(1);
+    text_pokemon.innerText = item.id.charAt(0).toUpperCase() + item.id.slice(1);
     face.appendChild(img_pokemon);
     face.appendChild(text_pokemon);
     face.classList.toggle('toggleCard');
@@ -35,7 +35,7 @@ const App = () => {
     card.appendChild(back);
     div_box.appendChild(card);
 
-            
+
   });
 
   return div_box;
