@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "pretest": "eslint .",
-    "test": "jest --coverage",
+    "test": "jest --coverage --verbose",
     "start": "serve src/",
     "deploy": "gh-pages -d src"
   },

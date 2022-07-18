@@ -67,8 +67,7 @@ const Start = () => {
      div_end.appendChild(btn_play);
      
      div_start.appendChild(div_end);
-  
-     
+      
     
     return div_start;
 
