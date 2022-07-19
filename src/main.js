@@ -42,9 +42,11 @@ const checkCards = (e) => {
 
   const flipped_cards = document.querySelectorAll('.flipped');
   const toggle_cards = document.querySelectorAll('.card.toggleCard');
+  let cards_match;
   //lógica de validación
-  if (flipped_cards.length === 2) {//se valida las 2 cartas elegidas
-    if (flipped_cards[0].getAttribute('id') === flipped_cards[1].getAttribute('id')) {
+  if (flipped_cards.length === 2) {//solo se selecionan 2 cartas
+    cards_match = flipped_cards[0].getAttribute('id') === flipped_cards[1].getAttribute('id'); //se valida las 2 cartas seleccionadas
+    if (cards_match) {
       //console.log('match')
       flipped_cards.forEach((card) => {
         card.classList.remove('flipped');
@@ -60,7 +62,7 @@ const checkCards = (e) => {
   }
 
   //console.log(toggle_cards.length)
-  if (toggle_cards.length === 18) {
+  if (toggle_cards.length === 18 && cards_match) {
 
     root.appendChild(Modal('Ganaste esta partida. ¡Volver a jugar!'));
     const btn_modal_ok = root.querySelector('.ok-btn');
