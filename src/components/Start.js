@@ -6,7 +6,7 @@ const Start = () => {
   //Título de la App
   const img_title = document.createElement('img');
   img_title.className = 'img_title';
-  img_title.src = '../img/title.png';
+  img_title.src = './img/title.png';
   img_title.alt = 'title';
   div_start.appendChild(img_title);
   //Imagen de Pikachu junto a las instrucciones

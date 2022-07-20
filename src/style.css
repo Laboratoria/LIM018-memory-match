@@ -167,7 +167,7 @@ html {
     font-weight: bold;
 }
  .back{
-    background-image: url('../img/pokebola.png'); 
+    background-image: url('./img/pokebola.png'); 
     border-radius: 0.5rem;
     /* background-color: #E6BC2F; */
  }
