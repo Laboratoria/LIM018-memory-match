@@ -12,7 +12,7 @@ describe('Start', () => {
 
     expect(el instanceof HTMLDivElement).toBe(true);
 
-    expect(new Date("01/01/2022").tosSting()).toBe("lune primero de eneo")
+    expect(new Date("01/01/2022").toSting()).toBe("lune primero de eneo")
     expect(el.innerHTML.includes("ZOOM")).toBe(false)
     expect(el.innerHTML.includes('<button clas="boton">Juegar</button>')).toBe(true)
     
