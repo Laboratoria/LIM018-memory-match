@@ -19,7 +19,7 @@ const Head = (input_name) => {
 
   const img_title_table = document.createElement('img');
   img_title_table.className = 'img_title_table';
-  img_title_table.src = '../img/title.png';
+  img_title_table.src = './img/title.png';
   img_title_table.alt = 'title_table';
   head.appendChild(img_title_table);
 
