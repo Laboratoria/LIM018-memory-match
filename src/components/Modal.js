@@ -11,7 +11,7 @@ const Modal = (text) => {
   div_img.className = 'check-container';
   const img_modal = document.createElement('img');
   img_modal.className = 'img_modal';
-  img_modal.src = '../img/title.png';
+  img_modal.src = './img/title.png';
   div_img.appendChild(img_modal);
   div_popup_box_container.appendChild(div_img);
   //texto
