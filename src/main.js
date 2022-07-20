@@ -22,8 +22,9 @@ btn_play.addEventListener('click', (event) => {
     const btn_modal_ok = root.querySelector('.ok-btn');
     btn_modal_ok.addEventListener('click', (event) => {
       event.preventDefault();
+      modal_name.classList.remove('popup-overlay'); //pensar primero en el usuario
       modal_name.innerHTML = "";
-      modal_name.classList.remove('popup-overlay');
+      
 
     })
   } else {
