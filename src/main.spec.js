@@ -1,4 +1,4 @@
-import { checkCards } from './main-function-test'
+import { checkCards } from './main-functions.js'
 
 describe('pruebas de checkCards', () => {
   it('should toggle flipped class', () => {

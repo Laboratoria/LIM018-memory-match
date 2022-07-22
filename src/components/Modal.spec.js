@@ -1,8 +1,10 @@
-/* import Modal from './Modal';
+import Modal from './Modal.js';
 
 describe('Modal', () => {
-  it('should render without crashing', () => {
+  it('Modal component should render without crashing', () => {
     const el = Modal();
-    expect(el instanceof HTMLElement).toBe(true);
+    document.body.innerHTML = el.innerHTML;
+
+    expect(el instanceof HTMLDivElement).toBe(true);
   });
-}); */
+});

@@ -1,9 +1,9 @@
-import pokemon from '../data/pokemon/pokemon.js';
+//import pokemon from '../data/pokemon/pokemon.js';
 //Un componente siempre devuelve un elemento, no un string
-const App = () => {
+const App = (arr) => {
   //array de objetos que están en pokemon.js
   //console.log(name_player);
-  const arr = pokemon.items;
+  // const arr = pokemon.items;
   //duplicar cartas y barajar
   const myArr = arr.concat(arr).sort(() => Math.random() - 0.5);
   //Dibujar cartas // 
