@@ -3,13 +3,10 @@ import App from './components/App.js';
 import pokemon from './data/pokemon/pokemon.js';
 import Modal from './components/Modal.js';
 
-//import Start from './components/Start.js';
-
-//const root = document.getElementById('root');
 let cards;
 
 //Emparejar cartas
-export const checkCards = (e) => {
+export const checkCards = (e, root, input_name) => {
   
   const clicked_cards = e.target;
   clicked_cards.classList.add('flipped'); //esta clase solo sirve para validar
@@ -34,22 +31,23 @@ export const checkCards = (e) => {
       })
     }
   }
-
   //console.log(toggle_cards.length)
   if (toggle_cards.length === 2 && cards_match) {
     root.appendChild(Modal('Ganaste esta partida. ¡Volver a jugar!'));
-    const btn_modal_ok = root.querySelector('.ok-btn');
-    btn_modal_ok.addEventListener('click', (event) => {
-      event.preventDefault();
+    //debugger;
+    let btn_modal_ok = root.querySelector('.ok-btn');
+    btn_modal_ok.addEventListener('click', function () {
+      
       //play(root, input_name); //no funciona mostrar el 
       root.classList.remove('popup-overlay'); //pensar primero en el usuario
-      root.innerHTML = "";
+      
       //root.appendChild(Start());
-      play(); //no funciona
+      play(root, input_name); //no funciona
     })
 
   }
 }
+
 //empezar a jugar 
 export const play = (root, input_name) => {
   
@@ -61,10 +59,7 @@ export const play = (root, input_name) => {
   cards.forEach((card) => {
     card.addEventListener('click', (e) => {
       card.classList.toggle('toggleCard');
-      checkCards(e);
+      checkCards(e, root, input_name);
     })
   })
-
-
-
 }
