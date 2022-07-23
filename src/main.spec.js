@@ -1,7 +1,7 @@
 import { checkCards } from './main-functions.js'
 import Start from './components/Start.js';
 
-describe('pruebas de checkCards', () => {
+describe('Testing checkCards function', () => {
   it('should toggle flipped class', () => {
     // DADO crear el entorno que controlo (identificar el entorno)
     const mockEvent = {
@@ -16,7 +16,7 @@ describe('pruebas de checkCards', () => {
     const result = mockEvent.target.classList.contains('flipped')
     expect(result).toBe(true)
   })
-  it('should toggle toogle 2 cards at time', () => {
+  it('should 2 toggle cards at time', () => {
     // DADO crear el entorno que controlo (identificar el entorno)
     const mockEvent = {
       target: document.createElement('div') //es un objeto
