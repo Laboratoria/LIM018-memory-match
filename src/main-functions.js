@@ -7,7 +7,6 @@ let cards;
 
 //Emparejar cartas
 export const checkCards = (e, root, input_name) => {
-  
   const clicked_cards = e.target;
   clicked_cards.classList.add('flipped'); //esta clase solo sirve para validar
 
@@ -37,12 +36,8 @@ export const checkCards = (e, root, input_name) => {
     //debugger;
     let btn_modal_ok = root.querySelector('.ok-btn');
     btn_modal_ok.addEventListener('click', function () {
-      
-      //play(root, input_name); //no funciona mostrar el 
       root.classList.remove('popup-overlay'); //pensar primero en el usuario
-      
-      //root.appendChild(Start());
-      play(root, input_name); //no funciona
+      play(root, input_name); 
     })
 
   }
