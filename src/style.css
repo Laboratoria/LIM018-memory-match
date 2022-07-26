@@ -1,0 +1,310 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Para usar medidas Rem: 1 rem equivale a 10px; */
+
+html {
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.div_start {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(77, 173, 91, 0.6);
+}
+.img_title {
+    display: flex;
+    flex-direction: row;
+    width: 65.8rem;
+    height: 15.2rem;
+    left: 15.6rem;
+    top: 9.9em;
+    margin-top: 2.5rem;
+    margin-left: 32rem;
+       
+}
+.div_container_pikachu_instruction {
+    display: flex;
+    flex-direction: row;
+}
+.img_pikachu {
+    margin-left: 10rem;
+    height: 32rem;
+    width: 32rem;
+    display: flex;
+    
+     
+}
+.title_welcome {
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.div_p {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    font-size: 2rem;
+    padding: 5rem;
+    height: 20rem;
+ } 
+
+ 
+/* Para usar medidas Rem: 1 rem equivale a 10px; */
+
+.div_end  {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+   
+}
+
+.input_name {
+    
+    font-style: normal;
+    font-size: 2rem;
+    text-align: center;
+    width: 35rem;
+    height: 5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(230, 188, 47, 0.8);
+    border-color: #E6BC2F;
+}
+
+.btn_play {
+    
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(230, 188, 47, 0.8);
+    border-color: rgba(230, 188, 47, 0.8);
+   
+} 
+ /* Tablero */
+
+
+
+
+/*Header del tablero-Componente Player*/
+.head {
+    display: flex;
+    padding-bottom: 2.5rem;
+    background-color: rgba(77, 173, 91, 0.6);
+
+ }
+
+ .img_title_table {
+
+    width: 65rem;
+    height: 12rem;
+    margin-left: 9.4rem;
+    margin-top: 2.5rem;
+ }
+
+ .input_name_player {
+    display: flex;
+    align-items: center;
+    width: 34.3rem;
+    height: 4rem;
+    margin-top: 5rem;
+    margin-left: 9rem;
+    font-size: 4rem;
+    font-weight:bold;
+ }
+
+ /*inicio estilos cartas volteadas*/
+
+/*  .div_box {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    background-color: #4DAD5B;
+ } */
+.div_box{
+    display: grid; 
+    justify-content: center;
+    grid-template-rows: repeat(3, 10rem);
+    grid-template-columns: repeat(6, 10rem);
+    perspective: 800px;
+    grid-gap: 2rem;
+    background-color: rgba(230, 188, 47, 0.8);
+    padding-top: 3.3rem;
+    padding-bottom: 3.5rem;
+}
+
+.img_pokemon {
+    position: absolute;
+    left: 1rem;
+    top:1.5rem;
+    backface-visibility: hidden;
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+    border-radius: 0.5rem;
+}
+
+.text_pokemon{
+    position: absolute;
+    top: 0.5rem;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+ .back{
+    background-image: url('./img/pokebola.png'); 
+    border-radius: 0.5rem;
+    /* background-color: #E6BC2F; */
+ }
+
+ .face,
+ .back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 0.5rem;
+ }
+
+ .card {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+
+ .toggleCard {
+    transform: rotateY(180deg);
+ }
+
+ /*fin estilos cartas volteadas*/
+
+ /* Modal */
+ .popup-overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(237, 230, 207, 0.598); /*fondo del modal*/
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    z-index: 1; /*para que se esconda -1*/
+    opacity: 1; /*para que se esconda 0*/
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    
+ }
+
+
+ .popup-box-container{
+    font-size: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(230, 187, 47);
+    width: 40rem;
+    height: 50vh;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem; 
+
+ }
+
+ .check-container{
+    background-color: rgba(230, 188, 47, 0.8);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color:rgba(230, 188, 47, 0.8);
+    opacity: 0.5;
+    font-size: 250%;
+    margin:2.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem #E6BC2F;
+ }
+ .img_modal {
+    
+    height: 7rem;
+    width: 30rem;  
+         
+}
+
+
+ .popup-message-container span {
+    
+    color: black;
+    font-size:180%;
+    
+ }
+
+ .ok-btn{
+    font-style: normal;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #E3350D;
+    border: transparent;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding: 1.5rem;
+    color:white;
+    margin-top: 2rem;
+    width: 25%;
+    
+    cursor: pointer;
+
+ }
+ @media only screen and (max-width:40rem) {
+    .popup-box-container{
+        width: 30rem;
+        
+        
+    }
+ }
+
+ @media only screen and (max-height:40rem) {
+    .popup-box-container{
+         height: 30rem;
+        
+    }
+ }
+ .active{
+    opacity: 1;
+    z-index: 1;
+ }

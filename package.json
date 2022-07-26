@@ -5,8 +5,8 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "pretest": "eslint .",
-    "test": "jest --coverage",
+    "_pretest": "eslint .", 
+    "test": "jest --coverage --verbose",
     "start": "serve src/",
     "deploy": "gh-pages -d src"
   },
