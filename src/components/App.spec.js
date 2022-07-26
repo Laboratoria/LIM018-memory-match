@@ -16,7 +16,7 @@ describe('App', () => {
 
   const cards = App(arr_p);
   const cards_html = cards.querySelectorAll('.card');
-  const n_arr_p = arr_p.sort(() => Math.random() - 0.5);
+  const n_arr_p = arr_p.concat(arr_p).sort(() => Math.random() - 0.5);
   it('App component should render without crashing', () => {
     expect(cards instanceof HTMLDivElement).toBe(true);
   });
@@ -25,10 +25,7 @@ describe('App', () => {
     expect(cards_html.length).toBe(arr_p.length*2);
     expect(cards_html).not.toBe(cards);
     expect(arr_p).not.toBe(App(arr_p));
-    expect(arr_p[0].id).not.toBe('bulbasaur');
-    expect(arr_p[2].id).not.toBe('venusaur');
-    expect(n_arr_p[0].id).not.toBe('bulbasaur');
-    expect(n_arr_p[2].id).not.toBe('venusaur');
+    expect(n_arr_p[4].id).not.toBe('charmeleon');
     //console.log(arr_p[1].id)
     //console.log(n_arr_p[1].id)
   });
