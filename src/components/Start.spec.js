@@ -7,7 +7,6 @@ describe('Start', () => {
     const btn_play = document.querySelector('.btn_play');
     btn_play.addEventListener('click', () => {btn_play.click()});
     expect(el instanceof HTMLDivElement).toBe(true);
-
     
   });
 });

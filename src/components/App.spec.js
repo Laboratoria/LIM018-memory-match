@@ -1,5 +1,5 @@
 import App from './App.js';
-//import pokemon from '../data/pokemon/pokemon.js';
+
 describe('App', () => {
   const arr_p = [
     { id: 'bulbasaur', image: 'https://www.serebii.net/pokemongo/pokemon/001.png', bgColor: '#4DAD5B' },
