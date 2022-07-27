@@ -17,43 +17,46 @@ html {
     flex-direction: column;
     background-color: #EFDF8B;
 }
-.img_title {
+.div_img_title {
     display: flex;
-    flex-direction: row;
-    width: 65.8rem;
-    height: 15.2rem;
-    left: 15.6rem;
-    top: 9.9em;
-    margin-top: 2.5rem;
-    margin-left: 32rem;
+    justify-content: center;
+    align-items: center;
+  
        
 }
-.div_container_pikachu_instruction {
-    display: flex;
-    flex-direction: row;
+.img_title {
+    width: 50rem;
+    height: 10rem;
+    margin-top: 4rem;
+    /*margin-left: 40rem;*/
 }
-.img_pikachu {
-    margin-left: 10rem;
-    height: 32rem;
-    width: 32rem;
-    display: flex;
-    
-     
-}
-.title_welcome {
-    display: flex;
-    font-size: 4rem;
-    justify-content: center;
-    margin-top: 2.5rem;
-}
-.div_p {
+.div_container {
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
-    font-size: 2rem;
-    padding: 5rem;
-    height: 20rem;
- } 
+}
+
+.div_img_pikachu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_welcome {
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    margin-top: 1.2rem;
+    
+}
+.img_pikachu {
+    
+    height: 30rem;
+    width: 30rem;
+    /*margin-left: 50rem;*/
+            
+}
+
+
 
  
 /* Para usar medidas Rem: 1 rem equivale a 10px; */
@@ -61,7 +64,7 @@ html {
 .div_end  {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
    
 }
 
