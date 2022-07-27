@@ -13,7 +13,7 @@ const App = (arr) => {
   myArr.forEach((item) => {
     const card = document.createElement('div');
     card.classList = 'card'; //variable que almacena la carta 
-    card.setAttribute('id', item.id);
+    card.setAttribute('data-id', item.id);
 
     const face = document.createElement('div');
     const img_pokemon = document.createElement('img');
