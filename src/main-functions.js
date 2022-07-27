@@ -5,16 +5,15 @@ import Modal from './components/Modal.js';
 
 let cards;
 
-//Emparejar cartas
-export const checkCards = (e, root, input_name) => {
+export const checkCards = (e, root, input_name) => { //Emparejar cartas
   const clicked_cards = e.target;
   clicked_cards.classList.add('flipped'); //esta clase solo sirve para validar
 
   const flipped_cards = document.querySelectorAll('.flipped');
   const toggle_cards = document.querySelectorAll('.card.toggleCard');
   let cards_match;
-  //lógica de validación
-  if (flipped_cards.length === 2) {//solo se selecionan 2 cartas
+
+  if (flipped_cards.length === 2) { //lógica de validación
     cards_match = flipped_cards[0].getAttribute('data-id') === flipped_cards[1].getAttribute('data-id'); //se valida las 2 cartas seleccionadas
     if (cards_match) {
       //console.log('match')
@@ -38,15 +37,13 @@ export const checkCards = (e, root, input_name) => {
     let btn_modal_ok = root.querySelector('.ok-btn');
     btn_modal_ok.addEventListener('click', function () {
       root.classList.remove('popup-overlay'); //pensar primero en el usuario
-      play(root, input_name); 
+      play(root, input_name);
     })
 
   }
 }
 
-//empezar a jugar 
-export const play = (root, input_name) => {
-  
+export const play = (root, input_name) => { //empezar a jugar 
   root.innerHTML = "";
   // debugger;
   root.appendChild(Head(input_name));
