@@ -36,8 +36,7 @@ describe('Testing checkCards function and play function', () => {
   
     mockRoot.appendChild(Head(mockInputName));
     mockRoot.appendChild(App(mockArr));
-     //mockrook.id              mockRoot.getEleentsByClassName('cards') const tarjetas = tarjetas[0]
-
+    
     let mockClicked = mockEvent.target;
 
      mockClicked.addEventListener('click', function () { 
