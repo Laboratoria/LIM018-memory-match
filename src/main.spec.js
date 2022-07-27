@@ -1,6 +1,7 @@
 import { checkCards } from './main-functions.js';
 //import { play } from './main-functions.js'
 import Start from './components/Start.js';
+import Head from './components/Head.js';
 import App from './components/App.js';
 
 describe('Testing checkCards function and play function', () => {
@@ -22,7 +23,8 @@ describe('Testing checkCards function and play function', () => {
     const mockEvent = {
       target: document.createElement('div') //es un objeto
     }
-    const mockRoot = document.createElement('div')
+    const mockRoot = document.createElement('div');
+    mockRoot.appendChild(Start());
     const mockInputName = mockRoot.querySelector('.input_name');
     const mockArr = [
       { id: 'bulbasaur', image: 'https://www.serebii.net/pokemongo/pokemon/001.png', bgColor: '#4DAD5B' },
@@ -32,17 +34,17 @@ describe('Testing checkCards function and play function', () => {
       
     ];
   
-    mockRoot.appendChild(Start(mockInputName));
+    mockRoot.appendChild(Head(mockInputName));
     mockRoot.appendChild(App(mockArr));
-                  
+     //mockrook.id              mockRoot.getEleentsByClassName('cards') const tarjetas = tarjetas[0]
+
     let mockClicked = mockEvent.target;
 
-     mockClicked.addEventListener('click', function () {
+     mockClicked.addEventListener('click', function () { 
         mockClicked.classList.add('flipped');
       });
 
-     /*let clickEvent = new Event('click');
-mockClicked.dispatchEvent(clickEvent); */
+   
 
     // CUANDO pasar la función o funciones a evaluar (el accionar)
     checkCards(mockEvent, mockRoot, mockInputName);
