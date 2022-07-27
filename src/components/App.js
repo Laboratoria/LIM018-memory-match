@@ -1,11 +1,8 @@
 //import pokemon from '../data/pokemon/pokemon.js';
 //Un componente siempre devuelve un elemento, no un string
 const App = (arr) => {
- 
-  //duplicar cartas y barajar
-  const myArr = arr.concat(arr).sort(() => Math.random() - 0.5);
-  //Dibujar cartas // 
-  const div_box = document.createElement('div');
+  const myArr = arr.concat(arr).sort(() => Math.random() - 0.5); //duplicar cartas y barajar
+  const div_box = document.createElement('div'); //Dibujar cartas 
   div_box.classList = 'div_box';
 
   myArr.forEach((item) => {
@@ -32,7 +29,6 @@ const App = (arr) => {
     card.appendChild(face);
     card.appendChild(back);
     div_box.appendChild(card);
-
 
   });
 
