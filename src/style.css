@@ -258,8 +258,8 @@ html {
     /*color:#E6BC2F;*/
     /*opacity: 0.5;*/
     font-size: 250%;
-    margin:2.5rem;
-    padding: 1rem;
+    margin:3.5rem;
+    /*padding: 0.2rem;*/
     /*box-shadow: 0 0 1rem rgba(230, 187, 47, 0.954);*/
  }
  .img_modal {
@@ -274,7 +274,8 @@ html {
     
     color: #293462;
     font-size:180%;
-    
+    font-weight: bold;
+    margin-top: auto;
  }
 
  .ok-btn{

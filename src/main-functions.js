@@ -31,7 +31,8 @@ export const checkCards = (e, root, input_name) => {
     }
   }
   //console.log(toggle_cards.length)
-  if (toggle_cards.length === 2 && cards_match) {
+  const all_cards = 2;
+  if (toggle_cards.length === all_cards && cards_match) {
     root.appendChild(Modal('Ganaste esta partida. ¡Volver a jugar!'));
     //debugger;
     let btn_modal_ok = root.querySelector('.ok-btn');
