@@ -19,7 +19,7 @@ const Modal = (text) => {
   div_text_modal.className = 'popup-message-container';
   const span_text = document.createElement('span');
   span_text.className = 'span-text';
-  span_text.innerText = `${text}`;
+  span_text.textContent = `${text}`;
   div_text_modal.appendChild(span_text);
   div_popup_box_container.appendChild(div_text_modal);
   

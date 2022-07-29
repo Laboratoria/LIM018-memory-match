@@ -5,6 +5,27 @@ import Modal from './components/Modal.js';
 
 let cards;
 
+export const init_events = (root) => {
+  let btn_play = root.querySelector('.btn_play');
+  const input_name = root.querySelector('.input_name');
+  btn_play.addEventListener('click', function () {
+        
+    if (input_name.value === "") {
+      const text_name = 'Escribe tu nombre'
+      const modal_name = root.appendChild(Modal(text_name));
+      let btn_modal_ok = root.querySelector('.ok-btn');
+      btn_modal_ok.addEventListener('click', function () {
+        modal_name.classList.remove('popup-overlay'); //pensar primero en el usuario
+        modal_name.innerHTML = "";
+        
+      })
+    } else {
+      play(root, input_name);
+  
+    }
+  
+  })
+}
 export const checkCards = (e, root, input_name) => { //Emparejar cartas
   const clicked_cards = e.target;
   clicked_cards.classList.add('flipped'); //esta clase solo sirve para validar
@@ -32,7 +53,8 @@ export const checkCards = (e, root, input_name) => { //Emparejar cartas
   //console.log(toggle_cards.length)
   const all_cards = 2;
   if (toggle_cards.length === all_cards && cards_match) {
-    root.appendChild(Modal('Ganaste esta partida. ¡Volver a jugar!'));
+    const text_winner = 'Ganaste esta partida. ¡Volver a jugar!'
+    root.appendChild(Modal(text_winner));
     //debugger;
     let btn_modal_ok = root.querySelector('.ok-btn');
     btn_modal_ok.addEventListener('click', function () {
