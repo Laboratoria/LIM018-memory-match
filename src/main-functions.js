@@ -26,44 +26,6 @@ export const init_events = (root) => {
   
   })
 }
-export const checkCards = (e, root, input_name) => { //Emparejar cartas
-  const clicked_cards = e.target;
-  clicked_cards.classList.add('flipped'); //esta clase solo sirve para validar
-
-  const flipped_cards = document.querySelectorAll('.flipped');
-  const toggle_cards = document.querySelectorAll('.card.toggleCard');
-  let cards_match;
-
-  if (flipped_cards.length === 2) { //lógica de validación
-    cards_match = flipped_cards[0].getAttribute('data-id') === flipped_cards[1].getAttribute('data-id'); //se valida las 2 cartas seleccionadas
-    if (cards_match) {
-      //console.log('match')
-      flipped_cards.forEach((card) => {
-        card.classList.remove('flipped');
-        card.style.pointerEvents = 'none';
-      })
-    } else {
-      //console.log('wrong')
-      flipped_cards.forEach((card) => {
-        card.classList.remove('flipped');
-        setTimeout(() => card.classList.remove('toggleCard'), 1000);
-      })
-    }
-  }
-  //console.log(toggle_cards.length)
-  const all_cards = 2;
-  if (toggle_cards.length === all_cards && cards_match) {
-    const text_winner = 'Ganaste esta partida. ¡Volver a jugar!'
-    root.appendChild(Modal(text_winner));
-    //debugger;
-    let btn_modal_ok = root.querySelector('.ok-btn');
-    btn_modal_ok.addEventListener('click', function () {
-      root.classList.remove('popup-overlay'); //pensar primero en el usuario
-      play(root, input_name);
-    })
-
-  }
-}
 
 export const play = (root, input_name) => { //empezar a jugar 
   root.innerHTML = "";
@@ -77,4 +39,56 @@ export const play = (root, input_name) => { //empezar a jugar
       checkCards(e, root, input_name);
     })
   })
+}
+
+export const checkCards = (e, root, input_name) => { //Emparejar cartas
+    
+  const clicked_cards = e.target; //cada e.target se añade la clase 
+  clicked_cards.classList.add('flipped'); //esta clase solo sirve para validar
+  
+  const flipped_cards = document.querySelectorAll('.flipped'); //nodeList de la clase flipped
+  console.log('antes que entre a los if',flipped_cards)
+  const toggle_cards = document.querySelectorAll('.card.toggleCard'); //nodeList de las cartas volteadas
+  let cards_match;
+  
+  if (flipped_cards.length === 2) { //lógica de validación
+      console.log('Estoy aquí porque somos', flipped_cards.length, 'clicks')
+            
+      cards_match = flipped_cards[0].getAttribute('data-id') === flipped_cards[1].getAttribute('data-id'); //se valida las 2 cartas seleccionadas
+    if (cards_match) {
+      //console.log('match')
+      flipped_cards.forEach((card) => {
+        card.classList.remove('flipped');
+        card.style.pointerEvents = 'none';
+      })
+    } 
+    else {
+      //console.log('wrong')
+      
+      flipped_cards.forEach((card) => {
+        card.classList.remove('flipped');
+        setTimeout(() => card.classList.remove('toggleCard'), 1000);
+      })
+      
+    }
+  } 
+  endGame(root, input_name, toggle_cards, cards_match)
+  //console.log(toggle_cards.length)
+
+}
+
+
+export const endGame =  (root, input_name, toggle_cards, cards_match) => {
+  const all_cards = 2;
+  if (toggle_cards.length === all_cards && cards_match) {
+    const text_winner = 'Ganaste esta partida. ¡Volver a jugar!'
+    root.appendChild(Modal(text_winner));
+    //debugger;
+    let btn_modal_ok = root.querySelector('.ok-btn');
+    btn_modal_ok.addEventListener('click', function () {
+      root.classList.remove('popup-overlay'); //pensar primero en el usuario
+      play(root, input_name);
+    })
+
+  }
 }

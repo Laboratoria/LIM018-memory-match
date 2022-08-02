@@ -3,12 +3,9 @@ import { init_events } from '../main-functions.js';
 
 
 
-
-
 describe('Start', () => {
   it('Start component should render without crashing', () => {
     const el = Start();
-    
     expect(el instanceof HTMLDivElement).toBe(true);
     
 
@@ -21,9 +18,6 @@ describe('Start', () => {
 
     btn_play.click();
     const popup = el.getElementsByClassName('popup-overlay');
-
-    //btn_play.addEventListener('click', () => {btn_play.click()});
-    
     expect(popup.length).toBe(1);
     
   });
@@ -38,12 +32,7 @@ describe('Start', () => {
     input_name.value = 'mock_input_name';
     
     btn_play.click();
-    
-
-
-
-
-    
+        
   });
 });
 
