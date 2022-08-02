@@ -1,6 +1,6 @@
 import App from './App.js';
 
-describe('App', () => {
+describe('App testing', () => {
   const arr_p = [
     { id: 'bulbasaur', image: 'https://www.serebii.net/pokemongo/pokemon/001.png', bgColor: '#4DAD5B' },
     { id: 'ivysaur', image: 'https://www.serebii.net/pokemongo/pokemon/002.png', bgColor: '#4DAD5B' },

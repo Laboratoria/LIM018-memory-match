@@ -1,6 +1,6 @@
 import Head from './Head.js';
 
-describe('Head', () => {
+describe('Head testing', () => {
   it('Head component should render without crashing includes input value', () => {
     
     const input_name = document.createElement('input'); // DADO (mocks - que necesitamos para correr la prueba - escenario)

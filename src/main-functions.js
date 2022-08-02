@@ -57,7 +57,7 @@ export const checkCards = (e, root, input_name) => { //Emparejar cartas
       cards_match = flipped_cards[0].getAttribute('data-id') === flipped_cards[1].getAttribute('data-id'); //se valida las 2 cartas seleccionadas
     if (cards_match) {
       //console.log('match')
-      
+
       flipped_cards.forEach((card) => {
         card.classList.remove('flipped');
         card.style.pointerEvents = 'none';

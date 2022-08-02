@@ -1,6 +1,6 @@
 import Modal from './Modal.js';
 
-describe('Modal', () => {
+describe('Modal testing', () => {
   it('Modal component should render without crashing with text content', () => {
     
     const el = Modal('mock_text');

@@ -12,6 +12,8 @@ html {
     color: #293462;
 }
 
+/*Estilos del componente Start()*/
+
 .div_start {
     display: flex;
     flex-direction: column;
@@ -56,11 +58,6 @@ html {
             
 }
 
-
-
- 
-/* Para usar medidas Rem: 1 rem equivale a 10px; */
-
 .div_end  {
     display: flex;
     justify-content: space-evenly;
@@ -97,12 +94,8 @@ html {
     color: #293462;
    
 } 
- /* Tablero */
-
-
-
-
-/*Header del tablero-Componente Player*/
+ 
+/*Estilos de Head()*/
 .head {
     display: flex;
     padding-bottom: 2.5rem;
@@ -129,15 +122,8 @@ html {
     font-weight:bold;
  }
 
- /*inicio estilos cartas volteadas*/
+ /* Estilos del componente App() */
 
-/*  .div_box {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    height: 100vh;
-    background-color: #4DAD5B;
- } */
 .div_box{
     display: grid; 
     justify-content: center;
@@ -203,7 +189,7 @@ html {
 
  /*fin estilos cartas volteadas*/
 
- /* Modal */
+ /*Estilos del Modal */
  .popup-overlay{
     position: fixed;
     left: 0;
@@ -298,21 +284,21 @@ html {
     cursor: pointer;
 
  }
- @media only screen and (max-width:40rem) {
+ @media only screen and (max-width:400px) {
     .popup-box-container{
-        width: 30rem;
+        width: 200px;
         
         
     }
  }
 
- @media only screen and (max-height:40rem) {
+ @media only screen and (max-height:400px) {
     .popup-box-container{
-         height: 30rem;
+         height: 200px;
         
     }
  }
- .active{
+/*  .active{
     opacity: 1;
     z-index: 1;
- }
+ } */
