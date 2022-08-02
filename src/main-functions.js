@@ -47,16 +47,17 @@ export const checkCards = (e, root, input_name) => { //Emparejar cartas
   clicked_cards.classList.add('flipped'); //esta clase solo sirve para validar
   
   const flipped_cards = document.querySelectorAll('.flipped'); //nodeList de la clase flipped
-  console.log('antes que entre a los if',flipped_cards)
+  
   const toggle_cards = document.querySelectorAll('.card.toggleCard'); //nodeList de las cartas volteadas
   let cards_match;
   
   if (flipped_cards.length === 2) { //lógica de validación
-      console.log('Estoy aquí porque somos', flipped_cards.length, 'clicks')
+      //console.log('Estoy aquí porque somos', flipped_cards.length, 'clicks')
             
       cards_match = flipped_cards[0].getAttribute('data-id') === flipped_cards[1].getAttribute('data-id'); //se valida las 2 cartas seleccionadas
     if (cards_match) {
       //console.log('match')
+      
       flipped_cards.forEach((card) => {
         card.classList.remove('flipped');
         card.style.pointerEvents = 'none';
