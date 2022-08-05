@@ -12,10 +12,16 @@ html {
     color: #293462;
 }
 
+body {
+    height: 100vh;
+    /*width: 100vh;*/
+}
+
 .div_start {
     display: flex;
     flex-direction: column;
     background-color: #EFDF8B;
+    height: 100vh;
 }
 .div_img_title {
     display: flex;
@@ -107,6 +113,7 @@ html {
     display: flex;
     padding-bottom: 2.5rem;
     background-color: #EFDF8B;
+    padding: 1rem;
 
  }
 
@@ -148,6 +155,7 @@ html {
     background-color: #EFDF8B;
     padding-top: 3.3rem;
     padding-bottom: 3.5rem;
+    height: 100vh;
 }
 
 .img_pokemon {
