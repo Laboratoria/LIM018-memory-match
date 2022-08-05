@@ -1,5 +1,6 @@
-import { checkCards } from './main-functions.js';
-import { play } from './main-functions.js'
+import { checkCards, drawCards, drawGame } from './main-functions.js';
+//import { play } from './main-functions.js'
+
 import Start from './components/Start.js';
 import Head from './components/Head.js';
 import App from './components/App.js';
@@ -19,31 +20,31 @@ describe('checkCards', () => {
     expect(result).toBe(true);
   })
 
-  it('should click 2 toggle cards at time', () => {
-  
+  it('should 2 toggle cards at time', () => {
+
     const mockRoot = document.createElement('div');
     mockRoot.appendChild(Start());
     const mockInputName = mockRoot.querySelector('.input_name');
 
-  
-   play(mockRoot, mockInputName);
+
+    drawCards(mockRoot, mockInputName);
     //console.log(mockRoot.innerHTML)
-   const allCards = mockRoot.querySelectorAll('.card'); //mockear el arreglo
-      
-   const card1 = allCards[0];
-   const card2 = allCards[1];
+    const allCards = mockRoot.querySelectorAll('.card'); //mockear el arreglo
+
+    const card1 = allCards[0];
+    const card2 = allCards[1];
 
     //CUANDO    
     card1.dispatchEvent(new Event('click'));
     card2.dispatchEvent(new Event('click'));
-    
+
     // ENTONCES
     const mockFlippedCards = mockRoot.querySelectorAll('.flipped');
-  
+
     const allFlippedCards = mockFlippedCards.length;
-   
+
     expect(allFlippedCards).toBe(2);
-    
+
   })
   it('should evaluate if these cards are equal', () => {
     
