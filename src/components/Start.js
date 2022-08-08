@@ -7,7 +7,7 @@ const Start = () => {
   div_img_title.className = 'div_img_title';
   const img_title = document.createElement('img');
   img_title.className = 'img_title';
-  img_title.src = '../img/title.png';
+  img_title.src = './img/title.png';
   img_title.alt = 'title';
   div_img_title.appendChild(img_title);
   div_start.appendChild(div_img_title);

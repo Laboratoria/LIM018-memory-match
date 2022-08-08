@@ -18,7 +18,7 @@ const App = (arr) => {
     face.classList = 'face';
     img_pokemon.src = item.image;
     face.style.background = item.bgColor;
-    text_pokemon.innerText = item.id.charAt(0).toUpperCase() + item.id.slice(1);
+    text_pokemon.textContent = item.id.charAt(0).toUpperCase() + item.id.slice(1);
     face.appendChild(img_pokemon);
     face.appendChild(text_pokemon);
     face.classList.toggle('toggleCard');
